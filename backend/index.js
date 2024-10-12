@@ -12,6 +12,7 @@ app.use(cors({
     credentials: true
 }));
 app.use(express.json());
+// app.use(express.urlencoded());
 app.use(cookieParser());
 app.use(router);
 app.use(error);

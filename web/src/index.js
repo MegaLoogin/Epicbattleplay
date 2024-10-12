@@ -48,20 +48,25 @@ const canvas = document.querySelector("canvas");
 const nameg = document.querySelector(".game-nameg");
 
 galleryitems.forEach(function (element) {
-  element.addEventListener("click", (e) => {
-    const gameUrl = element.dataset.gameId;
+  element.addEventListener("click", async (e) => {
+    if((await Api.subCoins(10)).status === 'success'){
+      onloadfunc();
+      const gameUrl = element.dataset.gameId;
 
-    backdrop.classList.add("modal-visible");
-    modal.classList.add("modal-visible");
-    frame.src = gameUrl;
-    console.log(frame)
-    console.log(gameUrl);
-    nameg.textContent = element.dataset.gameNameg;
-    
-    // Проверяем, существует ли элемент canvas
-    if (canvas) {
-      canvas.style.width = "100%";
-      canvas.style.minHeight = "90%";
+      backdrop.classList.add("modal-visible");
+      modal.classList.add("modal-visible");
+      frame.src = gameUrl;
+      console.log(frame)
+      console.log(gameUrl);
+      nameg.textContent = element.dataset.gameNameg;
+      
+      // Проверяем, существует ли элемент canvas
+      if (canvas) {
+        canvas.style.width = "100%";
+        canvas.style.minHeight = "90%";
+      }
+    }else{
+      alert("Not enough coins!");
     }
   });
 });

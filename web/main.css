@@ -16,6 +16,13 @@ html {
   scroll-behavior: smooth;
 }
 
+.account_info {
+  padding-right: 20px;
+  /* display: flex; */
+  /* justify-content: left; */
+  font-size: 16px;
+}
+
 body,
 h1,
 h2,

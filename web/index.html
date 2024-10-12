@@ -21,7 +21,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body onload="onloadfunc()">
     <header id="header" class="header">
       <div class="container header-wraper">
         <a href="./index.html" class="logo-link"
@@ -46,6 +46,16 @@
             </li>
             <li class="header__nav__list__item">
               <a class="header__nav__list__item__link" href="#games">Games</a>
+            </li>
+            <li class="header__nav__list__item logout">
+              <a class="header__nav__list__item__link" href="./signup.html">Sign Up</a>
+            </li>
+            <li class="header__nav__list__item logout">
+              <a class="header__nav__list__item__link" href="./login.html">Log In</a>
+            </li>
+            <li class="header__nav__list__item login">
+              <p class="account_info"><span id="email_value"></span><br/> Coins: <span id="coins_value"></span></p>
+              <a class="header__nav__list__item__link" onclick="logout()">Logout</a>
             </li>
             <li class="header__nav__list__item">
               <p class="last-item" href="">18+</p>
@@ -258,8 +268,11 @@
                 Step into the heat and conquer the fiery challenges in this
                 action-packed adventure. Can you tame the blaze?
               </p>
-              <div data-game-id="https://asccw.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=kingdombelow&lang=en_GB&practice=1&channel=desktop&demo=2" style="font-size: 24px" class="hero-btns more" 
-                >Learn More</div
+              <div data-game-id="https://asccw.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=kingdombelow&lang=en_GB&practice=1&channel=desktop&demo=2" style="font-size: 24px" class="hero-btns more login" 
+                >Play (-10 coins)</div
+              >
+              <div style="font-size: 24px" class="hero-btns logout"
+                ><a href="./signup.html" style="text-decoration: none;">Sign up to play</a></div
               >
             </li>
             <li class="gallery-list__item">
@@ -279,8 +292,11 @@
                 Unravel ancient mysteries and find your true calling in this
                 immersive journey of fate and destiny.
               </p>
-              <div data-game-id="https://asccw.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=ladyoffortunerm&lang=en_GB&practice=1&channel=desktop&demo=2" style="font-size: 24px" class="hero-btns more" 
-                >Learn More</div
+              <div data-game-id="https://asccw.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=ladyoffortunerm&lang=en_GB&practice=1&channel=desktop&demo=2" style="font-size: 24px" class="hero-btns more login" 
+                >Play (-10 coins)</div
+              >
+              <div style="font-size: 24px" class="hero-btns logout" 
+                ><a href="./signup.html" style="text-decoration: none;">Sign up to play</a></div
               >
             </li>
           </ul>
@@ -468,7 +484,7 @@
         return "";
       }
     </script>
-    
+    <script src="./src/auth.js"></script>
     <script src="./src/index.js"></script>
   </body>
 </html>
