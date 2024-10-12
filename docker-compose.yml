@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
     backend:
         build: ./backend/
@@ -8,8 +6,11 @@ services:
             - MONGO_USER=$MONGODB_USER
             - MONGO_PASS=$MONGODB_PASSWORD
             - MONGO_DB=$MONGODB_DATABASE
+            - SECRET_KEY=$SECRET_KEY
         stdin_open: true
         tty: true
+        volumes:
+            - /backend/node_modules
 
     web:
         restart: always

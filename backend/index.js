@@ -1,18 +1,23 @@
-const express = require('express');
+import express from "express";
+import cors from "cors";
+import mongoose from "mongoose";
+import { router } from "./router/index.js";
+import cookieParser from "cookie-parser";
+import error from "./middle/error.js";
+
 const app = express();
-const port = 8181;
+const {MONGO_USER, MONGO_PASS, MONGO_DB} = process.env;
 
-app.get('/', (req, res) => {
-  res.send({message: 'alive'})
-});
+app.use(cors({
+    credentials: true
+}));
+app.use(express.json());
+app.use(cookieParser());
+app.use(router);
+app.use(error);
 
-app.get('/summary', (req, res) => {
-  res.send({
-    source: 'https://en.wikipedia.org/wiki/HTTP',
-    summary: `HTTP, or Hypertext Transfer Protocol, is an application layer protocol used in the World Wide Web to facilitate data communication. It's the foundation for exchanging information between web browsers and servers. The protocol's functions include requests, responses, methods, and headers. HTTP has evolved over time, with versions 1.0, 1.1, 2, and 3 currently in use. HTTPS, a secure version of HTTP, is widely used for increased security. HTTP is a fundamental protocol in web communication, providing a structured method for data transfer and enabling the functionality of the internet.`
-  });
-});
+(async () => {
+    await mongoose.connect(`mongodb://${MONGO_USER}:${MONGO_PASS}@mongodb:27017/${MONGO_DB}?authSource=admin`);
+    app.listen(8181, () => console.log("Backend started!"));
+})();
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-});
