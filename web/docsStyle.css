@@ -1,0 +1,16 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+li {
+  margin-bottom: 12px;
+
+  font-size: 18px;
+  line-height: 28px;
+}
