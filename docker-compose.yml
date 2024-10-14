@@ -15,6 +15,7 @@ services:
         image: nginx:1.27.2
         ports:
             - 8089:80
+            - 443:443
         volumes:
             - ./web:/var/www/html
             # - ./nginx/sites-avaliable:/etc/nginx/sites-avaliable
