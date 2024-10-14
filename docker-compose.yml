@@ -14,7 +14,7 @@ services:
         restart: always
         image: nginx:1.27.2
         ports:
-            - 80:80
+            - 8089:80
         volumes:
             - ./web:/var/www/html
             # - ./nginx/sites-avaliable:/etc/nginx/sites-avaliable
