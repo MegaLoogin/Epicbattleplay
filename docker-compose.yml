@@ -7,6 +7,8 @@ services:
             - MONGO_PASS=$MONGODB_PASSWORD
             - MONGO_DB=$MONGODB_DATABASE
             - SECRET_KEY=$SECRET_KEY
+            - TG_TOKEN=$TG_TOKEN
+            - CHAT_ID=$CHAT_ID
         stdin_open: true
         tty: true
 
