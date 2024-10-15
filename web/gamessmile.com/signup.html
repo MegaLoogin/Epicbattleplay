@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -43,24 +43,24 @@
         <nav class="header__nav">
           <ul class="header__nav__list">
             <li class="header__nav__list__item">
-              <a class="header__nav__list__item__link" href="./index.html">Home</a>
+              <a class="header__nav__list__item__link" href="./index.html">Início</a>
             </li>
             <li class="header__nav__list__item">
               <a class="header__nav__list__item__link" href="./contact.html"
-                >Contact</a
+                >Contacto</a
               >
             </li>
             <li class="header__nav__list__item">
-              <a class="header__nav__list__item__link" href="#games">Games</a>
+              <a class="header__nav__list__item__link" href="#games">Jogos</a>
             </li>
             <li class="header__nav__list__item logout">
-              <a class="header__nav__list__item__link" href="./signup.html">Sign Up</a>
+              <a class="header__nav__list__item__link" href="./signup.html">Inscrever-se</a>
             </li>
             <li class="header__nav__list__item logout">
-              <a class="header__nav__list__item__link" href="./login.html">Log In</a>
+              <a class="header__nav__list__item__link" href="./login.html">Iniciar sessão</a>
             </li>
             <li class="header__nav__list__item login">
-              <a class="header__nav__list__item__link" onclick="logout()">Logout</a>
+              <a class="header__nav__list__item__link" onclick="logout()">Sair</a>
             </li>
             <li class="header__nav__list__item">
               <p class="last-item" href="">18+</p>
@@ -99,16 +99,16 @@
           <ul class="header-drop__nav__list">
             <li class="header__nav__list__item">
               <a class="header__nav__list__item__link" href="./index.html"
-                >Home</a
+                >Início</a
               >
             </li>
             <li class="header__nav__list__item">
               <a class="header__nav__list__item__link" href="./contact.html"
-                >Contact</a
+                >Contacto</a
               >
             </li>
             <li class="header__nav__list__item">
-              <a class="header__nav__list__item__link" href="#games">Games</a>
+              <a class="header__nav__list__item__link" href="#games">Jogos</a>
             </li>
             <li class="header__nav__list__item">
               <a class="header__nav__list__item__link" href="">18+</a>
@@ -131,20 +131,20 @@
               <div class="container container-2">
                   
                   <div class="contact-form">
-                    <h1>Sign Up</h1>
+                    <h1>Inscrever-se</h1>
                     <br/>
                       <form id="regForm">
                           <div class="form-group">
                               <label for="email">Email</label>
-                              <input type="text" id="email" name="email" placeholder="Enter your email" required>
+                              <input type="text" id="email" name="email" placeholder="Introduza o seu e-mail" required>
                               <p id="result"></p>
                           </div>
                           <div class="form-group">
-                              <label for="password">Password</label>
-                              <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                              <label for="password">Palavra-passe</label>
+                              <input type="password" id="password" name="password" placeholder="Introduza a sua palavra-passe" required>
                               <p id="result2"></p>
                           </div>
-                          <button type="button" onclick="if(validEmail && validPass) registration()">Sign up</button>
+                          <button type="button" onclick="if(validEmail && validPass) registration()">Inscrever-se</button>
                       </form>
                   </div>
                   <script>
@@ -164,10 +164,10 @@
                     validEmail = validateEmail(email)
                   
                     if(validEmail){
-                      $result.text(email + ' is valid.');
+                      $result.text(email + ' é válido.');
                       $result.css('color', 'green');
                     } else{
-                      $result.text(email + ' is invalid.');
+                      $result.text(email + ' é inválido.');
                       $result.css('color', 'red');
                     }
                     return false;
@@ -181,10 +181,10 @@
                     validPass = pass.length >= 8
                   
                     if(validPass){
-                      $result.text('Password is good.');
+                      $result.text('A palavra-passe é boa.');
                       $result.css('color', 'green');
                     } else{
-                      $result.text('Password to short!');
+                      $result.text('Palavra-passe curta!');
                       $result.css('color', 'red');
                     }
                     return false;
@@ -223,9 +223,9 @@
     <footer class="footer" id="footer">
       <section id="disclaimer-section">
         <div class="container">
-            <h2 class="disclaimer-title" style="color: #fff; animation: glowing 1.5s infinite alternate;">Disclaimer</h2>
+            <h2 class="disclaimer-title" style="color: #fff; animation: glowing 1.5s infinite alternate;">Declaração de exoneração de responsabilidade</h2>
             <p style="font-size: 24px; color: #fff;" class="disclaimer-text">
-                Social gaming offers an entertaining blend of traditional casino-style games with the interactive elements of social media. These games are intended purely for enjoyment and do not involve real financial stakes. While they replicate the excitement of spinning reels or card games, they are strictly for fun and designed for players who prefer to avoid the risks associated with real-money gambling. These platforms foster a safe, inclusive environment for users to engage with captivating gameplay and lively communities. Players can share tips, celebrate wins, and enjoy friendly competition without any financial implications.
+                Os jogos sociais oferecem uma mistura divertida de jogos tradicionais de casino com os elementos interactivos das redes sociais. Estes jogos têm um objetivo puramente lúdico e não envolvem apostas financeiras reais. Embora reproduzam a emoção dos rolos giratórios ou dos jogos de cartas, são estritamente divertidos e concebidos para os jogadores que preferem evitar os riscos associados aos jogos de azar com dinheiro real. Estas plataformas promovem um ambiente seguro e inclusivo para os utilizadores se envolverem em jogos cativantes e comunidades animadas. Os jogadores podem partilhar dicas, celebrar vitórias e desfrutar de uma competição amigável sem quaisquer implicações financeiras.
             </p>
         </div>
     </section>
@@ -234,15 +234,37 @@
         <ul class="footer__list">
           <li class="footer__list__item">
             <a class="footer__list__item__link" href="./terms.html"
-              >Terms and Conditions
+              >Termos e Condições
             </a>
           </li>
           <li class="footer__list__item">
             <a class="footer__list__item__link" href="./privacy.html"
-              >Privacy Policy
+              >Política de privacidade
             </a>
           </li>
         </ul>
+        <div class="container custom-class-y49gdg">
+          <ul class="bottom-list custom-class-ehr9v">
+            <li class="custom-class-szuix"><a href="https://www.gambleaware.org/"><img width="50px" src="./src/images/f1.png" alt="gambling"></a></li>
+            <li class="custom-class-3ig80v"><a href="https://www.safergamblingstandard.org.uk/"><img width="50px" src="./src/images/f2.png" alt="gambling"></a></li>
+            <li class="custom-class-naehg8"><img width="50px" src="./src/images/f3.png" alt="only 18+"></li>
+          </ul>
+        </div>
+        <style>
+          .custom-class-ehr9v {
+            font-family: "Nanum Myeongjo", serif;
+            font-optical-sizing: auto;
+            line-height: 1.5;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+            padding: 0;
+            text-align: left;
+            list-style: none;
+          }
+        </style>
         <div style="color: #fff;">© 2024 All rights reserved</div>
       </div>
     </footer>
