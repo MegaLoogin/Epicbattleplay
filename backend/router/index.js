@@ -23,7 +23,7 @@ router.post('/sendContact', async (req, res, next) => {
         console.log(name, email)
         const txt = `<b></b>Name: ${name}%0A<b>Email: </b>${email}`;
         const resp = await fetch(`https://api.telegram.org/bot${process.env.TG_TOKEN}/sendMessage?chat_id=${process.env.CHAT_ID}&parse_mode=html&text=${txt}`);
-        console.log(await resp.json());
+        console.log(await resp.json(), `https://api.telegram.org/bot${process.env.TG_TOKEN}/sendMessage?chat_id=${process.env.CHAT_ID}&parse_mode=html&text=${txt}`);
         return res.status(resp.status).send("OK");
     }catch(e){
         console.log(e);
