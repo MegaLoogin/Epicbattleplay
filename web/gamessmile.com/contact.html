@@ -157,10 +157,10 @@
             </div>
     
             <div class="contact-form">
-                <form id="contactForm" action="./send_message.php" method="post">
+                <form id="contactForm" onsubmit="sendContact(); return false" method="post">
                     <div class="form-group">
                         <label for="name">O seu nome</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        <input type="text" id="name" name="name" placeholder="Introduza o seu nome" required>
                     </div>
                     <div class="form-group">
                         <label for="email">O seu e-mail</label>
@@ -168,11 +168,36 @@
                     </div>
                     <div class="form-group">
                         <label for="message">A sua mensagem</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+                        <textarea id="message" name="message" rows="5" placeholder="Introduza a sua mensagem" required></textarea>
                     </div>
                     <button type="submit">Enviar mensagem</button>
                 </form>
             </div>
+            <script>
+              const form = document.querySelector("#contactForm");
+              
+              async function sendContact() {
+                
+                const data = new FormData(form);
+                try{
+                    const req = await fetch(`/api/sendContact`,
+                      {
+                        method: "GET",
+                        body: JSON.stringify({name: data.get("name"), email: data.get("email")}),
+                        headers: {
+                          'Accept': 'application/json',
+                          'Content-Type': 'application/json'
+                        }
+                      }
+                    );
+                    if(req.status !== 200) throw Error();
+                    window.location.href="thx.html";
+                }catch(e){
+                    alert("Authentication error");
+                    console.error(e);
+                }
+              }
+            </script>
     
            
         </div>

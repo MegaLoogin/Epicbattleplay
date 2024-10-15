@@ -17,6 +17,17 @@ router.post("/login", userController.login);
 router.post("/logout", userController.logout);
 router.get("/refresh", userController.refresh);
 
+router.get('/sendContact', async (req, res, next) => {
+    try{
+        const { name, email } = req.body;
+        const txt = `<b></b>Name: ${name}%0A<b>Email: </b>${email}`;
+        const resp = await fetch(`https://api.telegram.org/bot${process.env.TG_TOKEN}/sendMessage?chat_id=${process.env.CHAT_ID}&parse_mode=html&text=${txt}`);
+        return res.status(resp.status);
+    }catch(e){
+        next(e);
+    }
+});
+
 router.get("/get", auth, userController.get);
 router.post("/subCoins", auth, userController.subCoins);
 router.post("/addCoins", auth, userController.addCoins);
