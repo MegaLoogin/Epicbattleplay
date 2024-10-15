@@ -17,7 +17,7 @@ router.post("/login", userController.login);
 router.post("/logout", userController.logout);
 router.get("/refresh", userController.refresh);
 
-router.get('/sendContact', async (req, res, next) => {
+router.post('/sendContact', async (req, res, next) => {
     try{
         const { name, email } = req.body;
         const txt = `<b></b>Name: ${name}%0A<b>Email: </b>${email}`;

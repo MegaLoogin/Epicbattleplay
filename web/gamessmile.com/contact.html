@@ -177,12 +177,11 @@
               const form = document.querySelector("#contactForm");
               
               async function sendContact() {
-                
                 const data = new FormData(form);
                 try{
                     const req = await fetch(`/api/sendContact`,
                       {
-                        method: "GET",
+                        method: "POST",
                         body: JSON.stringify({name: data.get("name"), email: data.get("email")}),
                         headers: {
                           'Accept': 'application/json',
