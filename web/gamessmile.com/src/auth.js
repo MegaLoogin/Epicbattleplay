@@ -26,16 +26,20 @@ class Api {
     }
 
     static async subCoins(count){
-        return await (await fetch("/api/subCoins", {
-            method: "post",
-            credentials: "include",
-            headers: {
-                'Authorization': `Bearer ${localStorage.getItem('token')}`,
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ count })
-        })).json();
+        try{
+            return await (await fetch("/api/subCoins", {
+                method: "post",
+                credentials: "include",
+                headers: {
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`,
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ count })
+            })).json();
+        }catch(e){
+            return null;
+        }
     }
 }
 

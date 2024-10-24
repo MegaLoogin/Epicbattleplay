@@ -67,17 +67,12 @@ galleryitems.forEach(function (element) {
       }
     }
 
-    try{
-      const res = await Api.subCoins(10);
-      if(res.status === 'success'){
-        startGame();
-      }else{
-        alert("Not enough coins!");
-      }
-    }
-    catch(e){
-      console.log(e);
+    const res = await Api.subCoins(10);
+
+    if(res?.status === 'success' || res == null){
       startGame();
+    }else{
+      alert("Not enough coins!");
     }
   });
 });
