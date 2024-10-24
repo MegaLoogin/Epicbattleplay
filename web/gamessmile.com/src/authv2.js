@@ -27,7 +27,7 @@ class Api {
 
     static async subCoins(count){
         let data = null;
-        fetch("/api/subCoins", {
+        await fetch("/api/subCoins", {
             method: "post",
             credentials: "include",
             headers: {
