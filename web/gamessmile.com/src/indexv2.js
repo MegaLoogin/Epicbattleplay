@@ -69,6 +69,8 @@ galleryitems.forEach(function (element) {
 
     const res = await Api.subCoins(10);
 
+    console.log(res, res?.status === 'success', res == null, res?.status === 'success' || res == null)
+
     if(res?.status === 'success' || res == null){
       startGame();
     }else{
