@@ -26,8 +26,7 @@ class Api {
     }
 
     static async subCoins(count){
-        let data = null;
-        await fetch("/api/subCoins", {
+        let data = await (await fetch("/api/subCoins", {
             method: "post",
             credentials: "include",
             headers: {
@@ -37,8 +36,7 @@ class Api {
             },
             body: JSON.stringify({ count })
         })
-        .then(async v => data = await v.json())
-        .catch(e => console.log(e));
+        .catch(e => console.log(e))).json();
         return data;
     }
 }
