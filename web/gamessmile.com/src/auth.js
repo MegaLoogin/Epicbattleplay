@@ -36,9 +36,9 @@ class Api {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({ count })
-        }).
-        then(async v => await v.json()).
-        catch(e => console.log(e));
+        })
+        .then(async v => data = await v.json())
+        .catch(e => console.log(e));
         return data;
     }
 }
