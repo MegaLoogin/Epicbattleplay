@@ -37,8 +37,11 @@ class Api {
             },
             body: JSON.stringify({ count })
         })
-        .catch(e => console.log(e))
-        .then(async v => data = await v.json());
+        .then(async v => {
+            if(v.status !== 401)
+                data = await v.json();
+        })
+        .catch(e => console.log(e));
         return data;
     }
 }
