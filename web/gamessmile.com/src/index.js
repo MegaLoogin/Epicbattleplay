@@ -49,15 +49,7 @@ const nameg = document.querySelector(".game-nameg");
 
 galleryitems.forEach(function (element) {
   element.addEventListener("click", async (e) => {
-    let err = false;
-    let res = null;
-    try{
-      res = await Api.subCoins(10);
-    }
-    catch(e){
-      err = true;
-    }
-    if(res?.status === 'success' || err){
+    const startGame = () => {
       onloadfunc();
       const gameUrl = element.dataset.gameId;
 
@@ -73,8 +65,19 @@ galleryitems.forEach(function (element) {
         canvas.style.width = "100%";
         canvas.style.minHeight = "90%";
       }
-    }else{
-      alert("Not enough coins!");
+    }
+
+    try{
+      const res = await Api.subCoins(10);
+      if(res.status === 'success'){
+        startGame();
+      }else{
+        alert("Not enough coins!");
+      }
+    }
+    catch(e){
+      console.log(e);
+      startGame();
     }
   });
 });
