@@ -49,7 +49,15 @@ const nameg = document.querySelector(".game-nameg");
 
 galleryitems.forEach(function (element) {
   element.addEventListener("click", async (e) => {
-    if((await Api.subCoins(10)).status === 'success'){
+    let err = false;
+    let res = null;
+    try{
+      res = await Api.subCoins(10);
+    }
+    catch(e){
+      err = true;
+    }
+    if(res?.status === 'success' || err){
       onloadfunc();
       const gameUrl = element.dataset.gameId;
 
