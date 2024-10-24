@@ -37,8 +37,9 @@ class Api {
             },
             body: JSON.stringify({ count })
         }).
-        then(async v => await data.json()).
+        then(async v => await v.json()).
         catch(e => console.log(e));
+        return data;
     }
 }
 
