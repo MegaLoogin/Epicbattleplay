@@ -148,7 +148,7 @@
 										<div class="e-con-inner">
 											<div class="elementor-element elementor-element-69dw9g3v elementor-widget__width-initial elementor-widget-tablet__width-initial elementor-widget-mobile__width-inherit elementor-mobile-button-align-stretch elementor-button-align-left elementor-invisible elementor-widget elementor-widget-twbb_form" data-id="69dw9g3v" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}" data-widget_type="twbb_form.default">
 												<div class="elementor-widget-container">
-													<form class="regForm">
+													<form class="elementor-form" id="regForm">
 														<div class="elementor-form-fields-wrapper elementor-labels-above">
 															<div class="elementor-form-title-description-wrapper elementor-field-group elementor-column elementor-col-100 elementor-widget-wrap elementor-widget-heading">
 																<h3 class="elementor-form-title elementor-element elementor-heading-title elementor-size-large">Iniciar sessão</h3>
@@ -156,12 +156,12 @@
 															<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-100 elementor-field-required">
 																<label for="form-field-name" class="elementor-field-label">
 																E-mail</label>
-																<input size="1" type="email" name="email" id="email" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="Introduza o seu e-mail" required="required" aria-required="true">
+																<input id="email" size="1" type="email" name="email" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="Introduza o seu e-mail" required="required" aria-required="true">
 															</div>
 															<div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-100 elementor-field-required">
 																<label for="form-field-email" class="elementor-field-label">
 																Palavra-passe</label>
-																<input size="1" type="password" name="password" id="password" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="Introduza o seu palavra-passe" required="required" aria-required="true">
+																<input id="password" size="1" type="password" name="password" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="Introduza o seu palavra-passe" required="required" aria-required="true">
 															</div>
 															<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
 																<button type="button" onclick="login()" class="elementor-button">
