@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>megavibearena.com</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/swiper.css" />
+    <link rel="stylesheet" href="css/drawer-menu.css" />
+    <link rel="stylesheet" href="css/singup.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="menu-toggle__icon" onclick="toggleMenu()"><img src="./images/logo.png" alt=""><span
+                    class="drawer-title">menu</span></div>
+            <div class="drawer-menu__container">
+                <nav class="drawer-menu__nav">
+                    <ul class="drawer-menu__list">
+                        <li class="drawer-menu__item"><a href="./index.html">Início</a></li>
+                        <li class="drawer-menu__item"><a href="./contact.html">Contacto</a></li>
+                        <li class="drawer-menu__item"><a href="#game">Jogos</a></li>
+                        <li class="drawer-menu__item"><a href="./signup.html">Inscrever-se</a></li>
+                        <li class="drawer-menu__item"><a href="./login.html">Iniciar sessão</a></li>
+                        <li class="drawer-menu__item"><a href="./terms-of-service.html">Termos de Serviço</a></li>
+                        <li class="drawer-menu__item"><a href="./privacy-policy.html">Política de Privacidade</a></li>
+                        <div class="contact-phone-container">
+                            <p class="contact-phone" id="phone-number">
+                                <a href="tel:+351-931-920-991">+351 931 920 991</a>
+                            </p>
+                            <button class="phone-button">
+                                <img src="./images/tell.png" alt="">
+                            </button>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+            <h1 class="header__title"><a href="./index.html">megavibearena</a><span
+                    class="text-items mob">18+</span></h1>
+            <h3 class="text-item desk">18+</h3>
+        </div>
+    </header>
+    <section class="banner-signup">
+        <div class="container">
+        <div class="form-container">
+            <h1>Inscrever-se</h1>
+            <form id="contactForm" action="./sign_up.php" method="post">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Seu endereço de email" required />
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" placeholder="Sua senha" required />
+                </div>    
+                <div class="form-group">
+                    <button type="submit" class="banner-btn">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </section>
+    
+    <section class="disclaimer">
+        <div class="container">
+            <h3>Declaração de exoneração de responsabilidade</h3>
+            <p>
+                Os jogos sociais oferecem uma experiência divertida, combinando a emoção dos jogos de casino tradicionais com a interatividade das redes sociais. 
+                Estes jogos são criados exclusivamente para entretenimento, sem envolver apostas financeiras reais. 
+                Embora proporcionem a mesma adrenalina dos rolos giratórios e jogos de cartas, são voltados para jogadores que desejam evitar os riscos do jogo com dinheiro real.
+            </p>
+            <p>
+                Nossas plataformas garantem um ambiente seguro e inclusivo, permitindo que os usuários participem de uma jogabilidade envolvente e se conectem em comunidades vibrantes.
+                Aqui, os jogadores têm a oportunidade de compartilhar dicas, comemorar vitórias e desfrutar de competições amistosas, tudo isso sem quaisquer implicações financeiras.
+            </p>
+        </div>
+    </section>
+    
+
+    <footer>
+        <div class="container">
+            <p>Copyright © 2024 Todos os direitos reservados.</p>
+            <div class="box-img">
+                <a href="https://www.gambleaware.org/"><img src="./images/f1.png" alt=""></a>
+
+                <a href="https://www.safergamblingstandard.org.uk/"><img src="./images/f2.png" alt=""></a>
+                <img src="./images/icon-18.png" alt="">
+            </div>
+
+
+            <div class="box-polic">
+                <p><a href="./privacy-policy.html">Política de Privacidade</a> | <a href="./terms-of-service.html">Termos de Serviço</a></p>
+            </div>
+        </div>
+    </footer>
+    <script defer="defer" src="js/main.js"></script>
+    <script defer="defer" src="js/contact.js"></script>
+</body>
+
+</html>

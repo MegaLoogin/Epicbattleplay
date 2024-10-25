@@ -1,0 +1,54 @@
+.banner-signup{
+    background: url('/images/banner3.jpg') no-repeat center center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.form-container {
+    background: rgba(14, 21, 56, 0.8); 
+    padding: 30px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
+    color: #e0e0e0; 
+    max-width: 400px; 
+    width: 100%; 
+}
+
+.form-group {
+    margin-bottom: 15px; 
+}
+
+.form-group label {
+    display: block; 
+    margin-bottom: 5px; 
+    font-weight: bold; 
+}
+
+.form-group input {
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #a720cc; 
+    border-radius: 5px; 
+    background: rgba(255, 255, 255, 0.1); 
+    color: #fff; 
+}
+
+.banner-btn {
+    background: linear-gradient(45deg, #ff00cc, #00ffff); 
+    color: #fff; 
+    border: none; 
+    padding: 12px; 
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: background 0.3s;
+}
+
+.banner-btn:hover {
+    background: linear-gradient(45deg, #00ffff, #ff00cc); 
+}

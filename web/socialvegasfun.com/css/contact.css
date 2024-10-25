@@ -1,0 +1,96 @@
+/* start contact form  */
+.contact {
+    background-color: #5d4d858f;
+    color: #dbdbdb;
+    padding: 10px;
+}
+
+.inner-contact-data h3,
+.inner-contact-data h4 {
+    text-align: center;
+    font-family: 'Cursive', sans-serif;
+}
+
+.form-container {
+    margin-top: 20px;
+    border: 2px solid #3b0a45;
+    border-radius: 10px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.form-container p {
+    color: #0a2a2f;
+    font-size: 20px;
+}
+
+.form-description {
+    text-align: center;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    color: #dbdbdb;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ff69b4;
+    border-radius: 5px;
+    background: #fff;
+    color: #3b0a45;
+}
+
+.form-group button {
+    background: #ff69b4;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.form-group button:hover {
+    background: #ff1493;
+}
+
+/* end contact form  */
+/* start disclaimer  */
+.disclaimer {
+    background-color: #5d4d858f;
+    color: #4b3c6f;
+    padding: 20px;
+
+}
+
+.disclaimer h3 {
+    text-align: center;
+    font-family: 'Cursive', sans-serif;
+    color: #3b0a45;
+}
+
+.disclaimer p {
+    text-align: justify;
+    line-height: 1.6;
+    margin-top: 15px;
+    font-family: 'Georgia', serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* end disclaimer  */

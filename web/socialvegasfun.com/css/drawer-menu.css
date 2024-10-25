@@ -1,0 +1,78 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+}
+
+.menu-toggle__icon {
+  font-size: 30px;
+  cursor: pointer;
+  padding: 0px 15px;
+  z-index: 1001;
+}
+
+.drawer-menu__container {
+  height: 100%; 
+  width: 0; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #5d4d858f;
+  overflow-x: hidden; 
+  transition: width 0.3s ease; 
+  padding-top: 154px;
+  z-index: 1;
+}
+
+.drawer-menu__nav {
+  width: 100%;
+}
+
+.drawer-menu__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.drawer-menu__item {
+  padding: 15px;
+  text-align: left;
+}
+
+.drawer-menu__item a {
+  text-decoration: none;
+  color: white;
+  animation: title-pulse 2.5s infinite;
+  font-size: 22px;
+  display: block;
+  background-clip: text;
+
+}
+
+.drawer-menu__item a:hover {
+  color: white;
+  text-align: left; 
+
+}
+
+.drawer-menu__container--open {
+  width: 350px; 
+}
+
+.content__wrapper {
+  transition: margin-left 0.3s ease;
+}
+
+.drawer-menu__container--open + .content__wrapper {
+  margin-left: 250px; 
+}
+.drawer-title{
+ 
+    background: linear-gradient(to right, #9ADC80, #7EC2A2, #5FA7C8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    color: white;
+    animation: title-pulse 2.5s infinite;
+}

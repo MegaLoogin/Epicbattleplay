@@ -1,0 +1,294 @@
+Oct 23 14:11:13 10.71.57.0 a1934312 Connection from 10.71.57.0 port 47504 on 82.165.90.65 port 22 rdomain ""
+Oct 23 14:11:13 10.71.57.0 a1934312 Accepted password for a1934312 from 10.71.57.0 port 47504 ssh2
+Oct 23 14:11:13 10.71.57.0 a1934312 Starting session: subsystem 'sftp' for a1934312 from 10.71.57.0 port 47504 id 0
+Oct 23 14:11:13 10.71.57.0 a1934312 session opened for local user a1934312 from [10.71.57.0]
+Oct 23 14:12:25 10.71.56.0 a1934312 Connection from 10.71.56.0 port 59822 on 82.165.90.65 port 22 rdomain ""
+Oct 23 14:12:25 10.71.56.0 a1934312 Accepted password for a1934312 from 10.71.56.0 port 59822 ssh2
+Oct 23 14:12:25 10.71.56.0 a1934312 Starting session: subsystem 'sftp' for a1934312 from 10.71.56.0 port 59822 id 0
+Oct 23 14:12:25 10.71.56.0 a1934312 session opened for local user a1934312 from [10.71.56.0]
+Oct 23 14:16:16 10.71.57.0 a1934312 session closed for local user a1934312 from [10.71.57.0]
+Oct 23 14:16:16 10.71.57.0 a1934312 Received disconnect from 10.71.57.0 port 47504:11: Connection terminated by the client.
+Oct 23 14:17:28 10.71.56.0 a1934312 session closed for local user a1934312 from [10.71.56.0]
+Oct 23 14:17:28 10.71.56.0 a1934312 Received disconnect from 10.71.56.0 port 59822:11: Connection terminated by the client.
+Oct 23 17:50:02 10.71.56.0 a1432534 Connection from 10.71.56.0 port 60120 on 82.165.90.65 port 22 rdomain ""
+Oct 23 17:50:04 10.71.56.0 a1432534 Accepted password for a1432534 from 10.71.56.0 port 60120 ssh2
+Oct 23 17:50:05 10.71.56.0 a1432534 Starting session: subsystem 'sftp' for a1432534 from 10.71.56.0 port 60120 id 0
+Oct 23 17:50:05 10.71.56.0 a1432534 session opened for local user a1432534 from [10.71.56.0]
+Oct 23 17:50:15 10.71.56.0 a1432534 sent status No such file
+Oct 23 17:50:15 10.71.56.0 a1432534 mkdir name "/js" mode 0777
+Oct 23 17:50:15 10.71.56.0 a1432534 [10.71.56.0|mkdir|0|0|511|0|0|2f6a73|]
+Oct 23 17:50:15 10.71.56.0 a1432534 open "/js/contact.js" flags WRITE,CREATE,TRUNCATE,EXCL mode 0666
+Oct 23 17:50:15 10.71.56.0 a1432534 close "/js/contact.js" bytes read 0 written 559
+Oct 23 17:50:15 10.71.56.0 a1432534 [10.71.56.0|put|0|559|0|0|0|2f6a732f636f6e746163742e6a73|]
+Oct 23 17:50:15 10.71.56.0 a1432534 set "/js/contact.js" modtime 20241016-10:01:31
+Oct 23 17:50:15 10.71.56.0 a1432534 open "/js/main.js" flags WRITE,CREATE,TRUNCATE,EXCL mode 0666
+Oct 23 17:50:15 10.71.56.0 a1432534 close "/js/main.js" bytes read 0 written 1380
+Oct 23 17:50:15 10.71.56.0 a1432534 [10.71.56.0|put|0|1380|0|0|0|2f6a732f6d61696e2e6a73|]
+Oct 23 17:50:15 10.71.56.0 a1432534 set "/js/main.js" modtime 20241023-17:41:24
+Oct 23 17:50:15 10.71.56.0 a1432534 open "/js/swiper.js.filepart" flags WRITE,CREATE,TRUNCATE mode 0666
+Oct 23 17:50:15 10.71.56.0 a1432534 close "/js/swiper.js.filepart" bytes read 0 written 255301
+Oct 23 17:50:15 10.71.56.0 a1432534 [10.71.56.0|put|0|255301|0|0|0|2f6a732f7377697065722e6a732e66696c6570617274|]
+Oct 23 17:50:15 10.71.56.0 a1432534 rename old "/js/swiper.js.filepart" new "/js/swiper.js"
+Oct 23 17:50:15 10.71.56.0 a1432534 [10.71.56.0|rename|0|0|0|0|0|2f6a732f7377697065722e6a732e66696c6570617274|2f6a732f7377697065722e6a73]
+Oct 23 17:50:15 10.71.56.0 a1432534 set "/js/swiper.js" modtime 20240731-11:18:20
+Oct 23 17:50:15 10.71.56.0 a1432534 sent status No such file
+Oct 23 17:50:16 10.71.56.0 a1432534 mkdir name "/images" mode 0777
+Oct 23 17:50:16 10.71.56.0 a1432534 [10.71.56.0|mkdir|0|0|511|0|0|2f696d61676573|]
+Oct 23 17:50:16 10.71.56.0 a1432534 open "/images/ava.png" flags WRITE,CREATE,TRUNCATE,EXCL mode 0666
+Oct 23 17:50:16 10.71.56.0 a1432534 close "/images/ava.png" bytes read 0 written 29732
+Oct 23 17:50:16 10.71.56.0 a1432534 [10.71.56.0|put|0|29732|0|0|0|2f696d616765732f6176612e706e67|]
+Oct 23 17:50:16 10.71.56.0 a1432534 set "/images/ava.png" modtime 20241023-15:22:59
+Oct 23 17:50:16 10.71.56.0 a1432534 open "/images/banner.webp.filepart" flags WRITE,CREATE,TRUNCATE mode 0666
+Oct 23 17:50:16 10.71.56.0 a1432534 close "/images/banner.webp.filepart" bytes read 0 written 791050
+Oct 23 17:50:16 10.71.56.0 a1432534 [10.71.56.0|put|0|791050|0|0|0|2f696d616765732f62616e6e65722e776562702e66696c6570617274|]
+Oct 23 17:50:16 10.71.56.0 a1432534 rename old "/images/banner.webp.filepart" new "/images/banner.webp"
+Oct 23 17:50:16 10.71.56.0 a1432534 [10.71.56.0|rename|0|0|0|0|0|2f696d616765732f62616e6e65722e776562702e66696c6570617274|2f696d616765732f62616e6e65722e77656270]
+Oct 23 17:50:16 10.71.56.0 a1432534 set "/images/banner.webp" modtime 20241023-14:44:29
+Oct 23 17:50:16 10.71.56.0 a1432534 open "/images/banner2.webp.filepart" flags WRITE,CREATE,TRUNCATE mode 0666
+Oct 23 17:50:16 10.71.56.0 a1432534 close "/images/banner2.webp.filepart" bytes read 0 written 823604
+Oct 23 17:50:16 10.71.56.0 a1432534 [10.71.56.0|put|0|823604|0|0|0|2f696d616765732f62616e6e6572322e776562702e66696c6570617274|]
+Oct 23 17:50:16 10.71.56.0 a1432534 rename old "/images/banner2.webp.filepart" new "/images/banner2.webp"
+Oct 23 17:50:16 10.71.56.0 a1432534 [10.71.56.0|rename|0|0|0|0|0|2f696d616765732f62616e6e6572322e776562702e66696c6570617274|2f696d616765732f62616e6e6572322e77656270]
+Oct 23 17:50:16 10.71.56.0 a1432534 set "/images/banner2.webp" modtime 20241023-15:08:59
+Oct 23 17:50:16 10.71.56.0 a1432534 open "/images/f1.png.filepart" flags WRITE,CREATE,TRUNCATE mode 0666
+Oct 23 17:50:16 10.71.56.0 a1432534 close "/images/f1.png.filepart" bytes read 0 written 164243
+Oct 23 17:50:16 10.71.56.0 a1432534 [10.71.56.0|put|0|164243|0|0|0|2f696d616765732f66312e706e672e66696c6570617274|]
+Oct 23 17:50:16 10.71.56.0 a1432534 rename old "/images/f1.png.filepart" new "/images/f1.png"
+Oct 23 17:50:16 10.71.56.0 a1432534 [10.71.56.0|rename|0|0|0|0|0|2f696d616765732f66312e706e672e66696c6570617274|2f696d616765732f66312e706e67]
+Oct 23 17:50:16 10.71.56.0 a1432534 set "/images/f1.png" modtime 20241023-11:35:36
+Oct 23 17:50:16 10.71.56.0 a1432534 open "/images/f2.png.filepart" flags WRITE,CREATE,TRUNCATE mode 0666
+Oct 23 17:50:17 10.71.56.0 a1432534 close "/images/f2.png.filepart" bytes read 0 written 205703
+Oct 23 17:50:17 10.71.56.0 a1432534 [10.71.56.0|put|0|205703|0|0|0|2f696d616765732f66322e706e672e66696c6570617274|]
+Oct 23 17:50:17 10.71.56.0 a1432534 rename old "/images/f2.png.filepart" new "/images/f2.png"
+Oct 23 17:50:17 10.71.56.0 a1432534 [10.71.56.0|rename|0|0|0|0|0|2f696d616765732f66322e706e672e66696c6570617274|2f696d616765732f66322e706e67]
+Oct 23 17:50:17 10.71.56.0 a1432534 set "/images/f2.png" modtime 20241023-11:35:49
+Oct 23 17:50:17 10.71.56.0 a1432534 open "/images/game2.png.filepart" flags WRITE,CREATE,TRUNCATE mode 0666
+Oct 23 17:50:17 10.71.56.0 a1432534 close "/images/game2.png.filepart" bytes read 0 written 374401
+Oct 23 17:50:17 10.71.56.0 a1432534 [10.71.56.0|put|0|374401|0|0|0|2f696d616765732f67616d65322e706e672e66696c6570617274|]
+Oct 23 17:50:17 10.71.56.0 a1432534 rename old "/images/game2.png.filepart" new "/images/game2.png"
+Oct 23 17:50:17 10.71.56.0 a1432534 [10.71.56.0|rename|0|0|0|0|0|2f696d616765732f67616d65322e706e672e66696c6570617274|2f696d616765732f67616d65322e706e67]
+Oct 23 17:50:17 10.71.56.0 a1432534 set "/images/game2.png" modtime 20241023-09:48:56
+Oct 23 17:50:17 10.71.56.0 a1432534 open "/images/icon-18.png" flags WRITE,CREATE,TRUNCATE,EXCL mode 0666
+Oct 23 17:50:17 10.71.56.0 a1432534 close "/images/icon-18.png" bytes read 0 written 34713
+Oct 23 17:50:17 10.71.56.0 a1432534 [10.71.56.0|put|0|34713|0|0|0|2f696d616765732f69636f6e2d31382e706e67|]
+Oct 23 17:50:17 10.71.56.0 a1432534 set "/images/icon-18.png" modtime 20241023-17:25:22
+Oct 23 17:50:17 10.71.56.0 a1432534 open "/images/image1.png.filepart" flags WRITE,CREATE,TRUNCATE mode 0666
+Oct 23 17:50:17 10.71.56.0 a1432534 close "/images/image1.png.filepart" bytes read 0 written 277305
+Oct 23 17:50:17 10.71.56.0 a1432534 [10.71.56.0|put|0|277305|0|0|0|2f696d616765732f696d616765312e706e672e66696c6570617274|]
+Oct 23 17:50:17 10.71.56.0 a1432534 rename old "/images/image1.png.filepart" new "/images/image1.png"
+Oct 23 17:50:17 10.71.56.0 a1432534 [10.71.56.0|rename|0|0|0|0|0|2f696d616765732f696d616765312e706e672e66696c6570617274|2f696d616765732f696d616765312e706e67]
+Oct 23 17:50:17 10.71.56.0 a1432534 set "/images/image1.png" modtime 20241023-15:58:15
+Oct 23 17:50:17 10.71.56.0 a1432534 open "/images/menu.png" flags WRITE,CREATE,TRUNCATE,EXCL mode 0666
+Oct 23 17:50:17 10.71.56.0 a1432534 close "/images/menu.png" bytes read 0 written 21428
+Oct 23 17:50:17 10.71.56.0 a1432534 [10.71.56.0|put|0|21428|0|0|0|2f696d616765732f6d656e752e706e67|]
+Oct 23 17:50:17 10.71.56.0 a1432534 set "/images/menu.png" modtime 20241023-14:49:02
+Oct 23 17:50:17 10.71.56.0 a1432534 open "/images/tell.png" flags WRITE,CREATE,TRUNCATE,EXCL mode 0666
+Oct 23 17:50:17 10.71.56.0 a1432534 close "/images/tell.png" bytes read 0 written 47677
+Oct 23 17:50:17 10.71.56.0 a1432534 [10.71.56.0|put|0|47677|0|0|0|2f696d616765732f74656c6c2e706e67|]
+Oct 23 17:50:17 10.71.56.0 a1432534 set "/images/tell.png" modtime 20241023-14:58:56
+Oct 23 17:50:17 10.71.56.0 a1432534 sent status No such file
+Oct 23 17:50:17 10.71.56.0 a1432534 mkdir name "/css" mode 0777
+Oct 23 17:50:17 10.71.56.0 a1432534 [10.71.56.0|mkdir|0|0|511|0|0|2f637373|]
+Oct 23 17:50:18 10.71.56.0 a1432534 open "/css/contact.css" flags WRITE,CREATE,TRUNCATE,EXCL mode 0666
+Oct 23 17:50:18 10.71.56.0 a1432534 close "/css/contact.css" bytes read 0 written 1686
+Oct 23 17:50:18 10.71.56.0 a1432534 [10.71.56.0|put|1|1686|0|0|0|2f6373732f636f6e746163742e637373|]
+Oct 23 17:50:18 10.71.56.0 a1432534 set "/css/contact.css" modtime 20241023-17:47:24
+Oct 23 17:50:18 10.71.56.0 a1432534 open "/css/drawer-menu.css" flags WRITE,CREATE,TRUNCATE,EXCL mode 0666
+Oct 23 17:50:18 10.71.56.0 a1432534 close "/css/drawer-menu.css" bytes read 0 written 1308
+Oct 23 17:50:18 10.71.56.0 a1432534 [10.71.56.0|put|0|1308|0|0|0|2f6373732f6472617765722d6d656e752e637373|]
+Oct 23 17:50:18 10.71.56.0 a1432534 set "/css/drawer-menu.css" modtime 20241023-16:48:11
+Oct 23 17:50:18 10.71.56.0 a1432534 open "/css/global.css" flags WRITE,CREATE,TRUNCATE,EXCL mode 0666
+Oct 23 17:50:18 10.71.56.0 a1432534 close "/css/global.css" bytes read 0 written 646
+Oct 23 17:50:18 10.71.56.0 a1432534 [10.71.56.0|put|0|646|0|0|0|2f6373732f676c6f62616c2e637373|]
+Oct 23 17:50:18 10.71.56.0 a1432534 set "/css/global.css" modtime 20241023-17:39:11
+Oct 23 17:50:18 10.71.56.0 a1432534 open "/css/header.css" flags WRITE,CREATE,TRUNCATE,EXCL mode 0666
+Oct 23 17:50:18 10.71.56.0 a1432534 close "/css/header.css" bytes read 0 written 4914
+Oct 23 17:50:18 10.71.56.0 a1432534 [10.71.56.0|put|0|4914|0|0|0|2f6373732f6865616465722e637373|]
+Oct 23 17:50:18 10.71.56.0 a1432534 set "/css/header.css" modtime 20241023-17:40:18
+Oct 23 17:50:18 10.71.56.0 a1432534 open "/css/singup.css" flags WRITE,CREATE,TRUNCATE,EXCL mode 0666
+Oct 23 17:50:18 10.71.56.0 a1432534 close "/css/singup.css" bytes read 0 written 1159
+Oct 23 17:50:18 10.71.56.0 a1432534 [10.71.56.0|put|0|1159|0|0|0|2f6373732f73696e6775702e637373|]
+Oct 23 17:50:18 10.71.56.0 a1432534 set "/css/singup.css" modtime 20241023-17:38:54
+Oct 23 17:50:18 10.71.56.0 a1432534 open "/css/style.css" flags WRITE,CREATE,TRUNCATE,EXCL mode 0666
+Oct 23 17:50:18 10.71.56.0 a1432534 close "/css/style.css" bytes read 0 written 8207
+Oct 23 17:50:18 10.71.56.0 a1432534 [10.71.56.0|put|0|8207|0|0|0|2f6373732f7374796c652e637373|]
+Oct 23 17:50:18 10.71.56.0 a1432534 set "/css/style.css" modtime 20241023-17:45:59
+Oct 23 17:50:18 10.71.56.0 a1432534 open "/css/swiper.css" flags WRITE,CREATE,TRUNCATE,EXCL mode 0666
+Oct 23 17:50:18 10.71.56.0 a1432534 close "/css/swiper.css" bytes read 0 written 20456
+Oct 23 17:50:18 10.71.56.0 a1432534 [10.71.56.0|put|0|20456|0|0|0|2f6373732f7377697065722e637373|]
+Oct 23 17:50:18 10.71.56.0 a1432534 set "/css/swiper.css" modtime 20240731-11:18:19
+Oct 23 17:50:18 10.71.56.0 a1432534 sent status No such file
+Oct 23 17:50:18 10.71.56.0 a1432534 mkdir name "/.vscode" mode 0777
+Oct 23 17:50:18 10.71.56.0 a1432534 [10.71.56.0|mkdir|0|0|511|0|0|2f2e7673636f6465|]
+Oct 23 17:50:18 10.71.56.0 a1432534 open "/.vscode/settings.json" flags WRITE,CREATE,TRUNCATE,EXCL mode 0666
+Oct 23 17:50:19 10.71.56.0 a1432534 close "/.vscode/settings.json" bytes read 0 written 42
+Oct 23 17:50:19 10.71.56.0 a1432534 [10.71.56.0|put|1|42|0|0|0|2f2e7673636f64652f73657474696e67732e6a736f6e|]
+Oct 23 17:50:19 10.71.56.0 a1432534 set "/.vscode/settings.json" modtime 20241016-09:56:18
+Oct 23 17:50:19 10.71.56.0 a1432534 open "/thankful.php" flags WRITE,CREATE,TRUNCATE,EXCL mode 0666
+Oct 23 17:50:19 10.71.56.0 a1432534 close "/thankful.php" bytes read 0 written 1466
+Oct 23 17:50:19 10.71.56.0 a1432534 [10.71.56.0|put|0|1466|0|0|0|2f7468616e6b66756c2e706870|]
+Oct 23 17:50:19 10.71.56.0 a1432534 set "/thankful.php" modtime 20241023-13:50:36
+Oct 23 17:50:19 10.71.56.0 a1432534 open "/terms-of-service.html" flags WRITE,CREATE,TRUNCATE,EXCL mode 0666
+Oct 23 17:50:19 10.71.56.0 a1432534 close "/terms-of-service.html" bytes read 0 written 6740
+Oct 23 17:50:19 10.71.56.0 a1432534 [10.71.56.0|put|0|6740|0|0|0|2f7465726d732d6f662d736572766963652e68746d6c|]
+Oct 23 17:50:19 10.71.56.0 a1432534 set "/terms-of-service.html" modtime 20241023-17:33:06
+Oct 23 17:50:19 10.71.56.0 a1432534 open "/sitemap.xml" flags WRITE,CREATE,TRUNCATE,EXCL mode 0666
+Oct 23 17:50:19 10.71.56.0 a1432534 close "/sitemap.xml" bytes read 0 written 1556
+Oct 23 17:50:19 10.71.56.0 a1432534 [10.71.56.0|put|0|1556|0|0|0|2f736974656d61702e786d6c|]
+Oct 23 17:50:19 10.71.56.0 a1432534 set "/sitemap.xml" modtime 20241023-17:29:53
+Oct 23 17:50:19 10.71.56.0 a1432534 open "/signup.html" flags WRITE,CREATE,TRUNCATE,EXCL mode 0666
+Oct 23 17:50:19 10.71.56.0 a1432534 close "/signup.html" bytes read 0 written 5194
+Oct 23 17:50:19 10.71.56.0 a1432534 [10.71.56.0|put|0|5194|0|0|0|2f7369676e75702e68746d6c|]
+Oct 23 17:50:19 10.71.56.0 a1432534 set "/signup.html" modtime 20241023-17:31:31
+Oct 23 17:50:19 10.71.56.0 a1432534 open "/sign_up.php" flags WRITE,CREATE,TRUNCATE,EXCL mode 0666
+Oct 23 17:50:19 10.71.56.0 a1432534 close "/sign_up.php" bytes read 0 written 557
+Oct 23 17:50:19 10.71.56.0 a1432534 [10.71.56.0|put|0|557|0|0|0|2f7369676e5f75702e706870|]
+Oct 23 17:50:19 10.71.56.0 a1432534 set "/sign_up.php" modtime 20241023-13:12:55
+Oct 23 17:50:19 10.71.56.0 a1432534 open "/send_message.php" flags WRITE,CREATE,TRUNCATE,EXCL mode 0666
+Oct 23 17:50:19 10.71.56.0 a1432534 close "/send_message.php" bytes read 0 written 606
+Oct 23 17:50:19 10.71.56.0 a1432534 [10.71.56.0|put|0|606|0|0|0|2f73656e645f6d6573736167652e706870|]
+Oct 23 17:50:19 10.71.56.0 a1432534 set "/send_message.php" modtime 20241014-22:59:39
+Oct 23 17:50:19 10.71.56.0 a1432534 open "/privacy-policy.html" flags WRITE,CREATE,TRUNCATE,EXCL mode 0666
+Oct 23 17:50:19 10.71.56.0 a1432534 close "/privacy-policy.html" bytes read 0 written 7237
+Oct 23 17:50:19 10.71.56.0 a1432534 [10.71.56.0|put|0|7237|0|0|0|2f707269766163792d706f6c6963792e68746d6c|]
+Oct 23 17:50:19 10.71.56.0 a1432534 set "/privacy-policy.html" modtime 20241023-17:33:47
+Oct 23 17:50:19 10.71.56.0 a1432534 open "/login.html" flags WRITE,CREATE,TRUNCATE,EXCL mode 0666
+Oct 23 17:50:20 10.71.56.0 a1432534 close "/login.html" bytes read 0 written 5197
+Oct 23 17:50:20 10.71.56.0 a1432534 [10.71.56.0|put|1|5197|0|0|0|2f6c6f67696e2e68746d6c|]
+Oct 23 17:50:20 10.71.56.0 a1432534 set "/login.html" modtime 20241023-17:31:07
+Oct 23 17:50:20 10.71.56.0 a1432534 open "/index.html" flags WRITE,CREATE,TRUNCATE,EXCL mode 0666
+Oct 23 17:50:20 10.71.56.0 a1432534 close "/index.html" bytes read 0 written 12639
+Oct 23 17:50:20 10.71.56.0 a1432534 [10.71.56.0|put|0|12639|0|0|0|2f696e6465782e68746d6c|]
+Oct 23 17:50:20 10.71.56.0 a1432534 set "/index.html" modtime 20241023-17:43:37
+Oct 23 17:50:20 10.71.56.0 a1432534 open "/doc_2024-10-15_19-41-39.htaccess" flags WRITE,CREATE,TRUNCATE,EXCL mode 0666
+Oct 23 17:50:20 10.71.56.0 a1432534 close "/doc_2024-10-15_19-41-39.htaccess" bytes read 0 written 107
+Oct 23 17:50:20 10.71.56.0 a1432534 [10.71.56.0|put|0|107|0|0|0|2f646f635f323032342d31302d31355f31392d34312d33392e6874616363657373|]
+Oct 23 17:50:20 10.71.56.0 a1432534 set "/doc_2024-10-15_19-41-39.htaccess" modtime 20241015-16:58:14
+Oct 23 17:50:20 10.71.56.0 a1432534 open "/contact.html" flags WRITE,CREATE,TRUNCATE,EXCL mode 0666
+Oct 23 17:50:20 10.71.56.0 a1432534 close "/contact.html" bytes read 0 written 6754
+Oct 23 17:50:20 10.71.56.0 a1432534 [10.71.56.0|put|0|6754|0|0|0|2f636f6e746163742e68746d6c|]
+Oct 23 17:50:20 10.71.56.0 a1432534 set "/contact.html" modtime 20241023-17:31:22
+Oct 23 17:51:25 10.71.56.0 a1432534 session closed for local user a1432534 from [10.71.56.0]
+Oct 23 17:51:25 10.71.56.0 a1432534 Connection closed by 10.71.56.0 port 60120
+Oct 25 18:56:43 10.71.56.0 a1432534 Connection from 10.71.56.0 port 57870 on 82.165.90.65 port 22 rdomain ""
+Oct 25 18:56:45 10.71.56.0 a1432534 Accepted password for a1432534 from 10.71.56.0 port 57870 ssh2
+Oct 25 18:56:46 10.71.56.0 a1432534 Starting session: subsystem 'sftp' for a1432534 from 10.71.56.0 port 57870 id 0
+Oct 25 18:56:46 10.71.56.0 a1432534 session opened for local user a1432534 from [10.71.56.0]
+Oct 25 18:59:45 10.71.56.0 a1432534 session closed for local user a1432534 from [10.71.56.0]
+Oct 25 18:59:45 10.71.56.0 a1432534 Connection closed by 10.71.56.0 port 57870
+Oct 25 20:46:22 10.71.56.0 a1432534 Connection from 10.71.56.0 port 58764 on 82.165.90.65 port 22 rdomain ""
+Oct 25 20:46:22 10.71.56.0 a1432534 Accepted password for a1432534 from 10.71.56.0 port 58764 ssh2
+Oct 25 20:46:22 10.71.56.0 a1432534 Starting session: subsystem 'sftp' for a1432534 from 10.71.56.0 port 58764 id 0
+Oct 25 20:46:22 10.71.56.0 a1432534 session opened for local user a1432534 from [10.71.56.0]
+Oct 25 20:47:05 10.71.56.0 a1432534 Connection from 10.71.56.0 port 58992 on 82.165.90.65 port 22 rdomain ""
+Oct 25 20:47:05 10.71.56.0 a1432534 Accepted password for a1432534 from 10.71.56.0 port 58992 ssh2
+Oct 25 20:47:05 10.71.56.0 a1432534 Connection from 10.71.56.0 port 58990 on 82.165.90.65 port 22 rdomain ""
+Oct 25 20:47:05 10.71.56.0 a1432534 Accepted password for a1432534 from 10.71.56.0 port 58990 ssh2
+Oct 25 20:47:06 10.71.56.0 a1432534 Starting session: subsystem 'sftp' for a1432534 from 10.71.56.0 port 58992 id 0
+Oct 25 20:47:06 10.71.56.0 a1432534 session opened for local user a1432534 from [10.71.56.0]
+Oct 25 20:47:06 10.71.56.0 a1432534 Starting session: subsystem 'sftp' for a1432534 from 10.71.56.0 port 58990 id 0
+Oct 25 20:47:06 10.71.56.0 a1432534 session opened for local user a1432534 from [10.71.56.0]
+Oct 25 20:47:06 10.71.56.0 a1432534 open "/contact.html" flags READ mode 0666
+Oct 25 20:47:06 10.71.56.0 a1432534 open "/doc_2024-10-15_19-41-39.htaccess" flags READ mode 0666
+Oct 25 20:47:06 10.71.56.0 a1432534 close "/contact.html" bytes read 6754 written 0
+Oct 25 20:47:06 10.71.56.0 a1432534 [10.71.56.0|get|0|6754|0|0|0|2f636f6e746163742e68746d6c|]
+Oct 25 20:47:06 10.71.56.0 a1432534 close "/doc_2024-10-15_19-41-39.htaccess" bytes read 107 written 0
+Oct 25 20:47:06 10.71.56.0 a1432534 [10.71.56.0|get|0|107|0|0|0|2f646f635f323032342d31302d31355f31392d34312d33392e6874616363657373|]
+Oct 25 20:47:06 10.71.56.0 a1432534 open "/index.html" flags READ mode 0666
+Oct 25 20:47:07 10.71.56.0 a1432534 open "/login.html" flags READ mode 0666
+Oct 25 20:47:07 10.71.56.0 a1432534 close "/index.html" bytes read 12639 written 0
+Oct 25 20:47:07 10.71.56.0 a1432534 [10.71.56.0|get|1|12639|0|0|0|2f696e6465782e68746d6c|]
+Oct 25 20:47:07 10.71.56.0 a1432534 close "/login.html" bytes read 5197 written 0
+Oct 25 20:47:07 10.71.56.0 a1432534 [10.71.56.0|get|0|5197|0|0|0|2f6c6f67696e2e68746d6c|]
+Oct 25 20:47:07 10.71.56.0 a1432534 open "/privacy-policy.html" flags READ mode 0666
+Oct 25 20:47:07 10.71.56.0 a1432534 open "/send_message.php" flags READ mode 0666
+Oct 25 20:47:07 10.71.56.0 a1432534 close "/privacy-policy.html" bytes read 7237 written 0
+Oct 25 20:47:07 10.71.56.0 a1432534 [10.71.56.0|get|0|7237|0|0|0|2f707269766163792d706f6c6963792e68746d6c|]
+Oct 25 20:47:07 10.71.56.0 a1432534 close "/send_message.php" bytes read 606 written 0
+Oct 25 20:47:07 10.71.56.0 a1432534 [10.71.56.0|get|0|606|0|0|0|2f73656e645f6d6573736167652e706870|]
+Oct 25 20:47:07 10.71.56.0 a1432534 open "/sign_up.php" flags READ mode 0666
+Oct 25 20:47:07 10.71.56.0 a1432534 open "/signup.html" flags READ mode 0666
+Oct 25 20:47:07 10.71.56.0 a1432534 sent status No such file
+Oct 25 20:47:07 10.71.56.0 a1432534 close "/signup.html" bytes read 5194 written 0
+Oct 25 20:47:07 10.71.56.0 a1432534 [10.71.56.0|get|0|5194|0|0|0|2f7369676e75702e68746d6c|]
+Oct 25 20:47:07 10.71.56.0 a1432534 close "/sign_up.php" bytes read 557 written 0
+Oct 25 20:47:07 10.71.56.0 a1432534 [10.71.56.0|get|0|557|0|0|0|2f7369676e5f75702e706870|]
+Oct 25 20:47:08 10.71.56.0 a1432534 open "/sitemap.xml" flags READ mode 0666
+Oct 25 20:47:08 10.71.56.0 a1432534 open "/terms-of-service.html" flags READ mode 0666
+Oct 25 20:47:08 10.71.56.0 a1432534 close "/sitemap.xml" bytes read 1556 written 0
+Oct 25 20:47:08 10.71.56.0 a1432534 [10.71.56.0|get|0|1556|0|0|0|2f736974656d61702e786d6c|]
+Oct 25 20:47:08 10.71.56.0 a1432534 close "/terms-of-service.html" bytes read 6740 written 0
+Oct 25 20:47:08 10.71.56.0 a1432534 [10.71.56.0|get|0|6740|0|0|0|2f7465726d732d6f662d736572766963652e68746d6c|]
+Oct 25 20:47:08 10.71.56.0 a1432534 open "/thankful.php" flags READ mode 0666
+Oct 25 20:47:08 10.71.56.0 a1432534 close "/thankful.php" bytes read 1466 written 0
+Oct 25 20:47:08 10.71.56.0 a1432534 [10.71.56.0|get|0|1466|0|0|0|2f7468616e6b66756c2e706870|]
+Oct 25 20:47:08 10.71.56.0 a1432534 open "/css/swiper.css" flags READ mode 0666
+Oct 25 20:47:08 10.71.56.0 a1432534 close "/css/swiper.css" bytes read 20456 written 0
+Oct 25 20:47:08 10.71.56.0 a1432534 [10.71.56.0|get|0|20456|0|0|0|2f6373732f7377697065722e637373|]
+Oct 25 20:47:09 10.71.56.0 a1432534 open "/css/style.css" flags READ mode 0666
+Oct 25 20:47:09 10.71.56.0 a1432534 open "/css/singup.css" flags READ mode 0666
+Oct 25 20:47:09 10.71.56.0 a1432534 close "/css/style.css" bytes read 8207 written 0
+Oct 25 20:47:09 10.71.56.0 a1432534 [10.71.56.0|get|0|8207|0|0|0|2f6373732f7374796c652e637373|]
+Oct 25 20:47:09 10.71.56.0 a1432534 close "/css/singup.css" bytes read 1159 written 0
+Oct 25 20:47:09 10.71.56.0 a1432534 [10.71.56.0|get|0|1159|0|0|0|2f6373732f73696e6775702e637373|]
+Oct 25 20:47:09 10.71.56.0 a1432534 open "/css/header.css" flags READ mode 0666
+Oct 25 20:47:09 10.71.56.0 a1432534 open "/css/global.css" flags READ mode 0666
+Oct 25 20:47:09 10.71.56.0 a1432534 close "/css/header.css" bytes read 4914 written 0
+Oct 25 20:47:09 10.71.56.0 a1432534 [10.71.56.0|get|0|4914|0|0|0|2f6373732f6865616465722e637373|]
+Oct 25 20:47:09 10.71.56.0 a1432534 close "/css/global.css" bytes read 646 written 0
+Oct 25 20:47:09 10.71.56.0 a1432534 [10.71.56.0|get|0|646|0|0|0|2f6373732f676c6f62616c2e637373|]
+Oct 25 20:47:09 10.71.56.0 a1432534 open "/css/drawer-menu.css" flags READ mode 0666
+Oct 25 20:47:09 10.71.56.0 a1432534 open "/css/contact.css" flags READ mode 0666
+Oct 25 20:47:10 10.71.56.0 a1432534 close "/css/drawer-menu.css" bytes read 1308 written 0
+Oct 25 20:47:10 10.71.56.0 a1432534 [10.71.56.0|get|1|1308|0|0|0|2f6373732f6472617765722d6d656e752e637373|]
+Oct 25 20:47:10 10.71.56.0 a1432534 close "/css/contact.css" bytes read 1686 written 0
+Oct 25 20:47:10 10.71.56.0 a1432534 [10.71.56.0|get|1|1686|0|0|0|2f6373732f636f6e746163742e637373|]
+Oct 25 20:47:10 10.71.56.0 a1432534 open "/images/tell.png" flags READ mode 0666
+Oct 25 20:47:10 10.71.56.0 a1432534 open "/images/menu.png" flags READ mode 0666
+Oct 25 20:47:10 10.71.56.0 a1432534 close "/images/tell.png" bytes read 47677 written 0
+Oct 25 20:47:10 10.71.56.0 a1432534 [10.71.56.0|get|0|47677|0|0|0|2f696d616765732f74656c6c2e706e67|]
+Oct 25 20:47:10 10.71.56.0 a1432534 close "/images/menu.png" bytes read 21428 written 0
+Oct 25 20:47:10 10.71.56.0 a1432534 [10.71.56.0|get|0|21428|0|0|0|2f696d616765732f6d656e752e706e67|]
+Oct 25 20:47:10 10.71.56.0 a1432534 open "/images/image1.png" flags READ mode 0666
+Oct 25 20:47:10 10.71.56.0 a1432534 open "/images/icon-18.png" flags READ mode 0666
+Oct 25 20:47:11 10.71.56.0 a1432534 close "/images/icon-18.png" bytes read 34713 written 0
+Oct 25 20:47:11 10.71.56.0 a1432534 [10.71.56.0|get|1|34713|0|0|0|2f696d616765732f69636f6e2d31382e706e67|]
+Oct 25 20:47:11 10.71.56.0 a1432534 close "/images/image1.png" bytes read 277305 written 0
+Oct 25 20:47:11 10.71.56.0 a1432534 [10.71.56.0|get|1|277305|0|0|0|2f696d616765732f696d616765312e706e67|]
+Oct 25 20:47:11 10.71.56.0 a1432534 open "/images/game2.png" flags READ mode 0666
+Oct 25 20:47:11 10.71.56.0 a1432534 open "/images/f2.png" flags READ mode 0666
+Oct 25 20:47:11 10.71.56.0 a1432534 close "/images/f2.png" bytes read 205703 written 0
+Oct 25 20:47:11 10.71.56.0 a1432534 [10.71.56.0|get|0|205703|0|0|0|2f696d616765732f66322e706e67|]
+Oct 25 20:47:11 10.71.56.0 a1432534 close "/images/game2.png" bytes read 374401 written 0
+Oct 25 20:47:11 10.71.56.0 a1432534 [10.71.56.0|get|0|374401|0|0|0|2f696d616765732f67616d65322e706e67|]
+Oct 25 20:47:11 10.71.56.0 a1432534 open "/images/f1.png" flags READ mode 0666
+Oct 25 20:47:11 10.71.56.0 a1432534 open "/images/banner2.webp" flags READ mode 0666
+Oct 25 20:47:11 10.71.56.0 a1432534 close "/images/f1.png" bytes read 164243 written 0
+Oct 25 20:47:11 10.71.56.0 a1432534 [10.71.56.0|get|0|164243|0|0|0|2f696d616765732f66312e706e67|]
+Oct 25 20:47:12 10.71.56.0 a1432534 open "/images/banner.webp" flags READ mode 0666
+Oct 25 20:47:12 10.71.56.0 a1432534 close "/images/banner2.webp" bytes read 823604 written 0
+Oct 25 20:47:12 10.71.56.0 a1432534 [10.71.56.0|get|1|823604|0|0|0|2f696d616765732f62616e6e6572322e77656270|]
+Oct 25 20:47:12 10.71.56.0 a1432534 open "/images/ava.png" flags READ mode 0666
+Oct 25 20:47:12 10.71.56.0 a1432534 close "/images/banner.webp" bytes read 791050 written 0
+Oct 25 20:47:12 10.71.56.0 a1432534 [10.71.56.0|get|0|791050|0|0|0|2f696d616765732f62616e6e65722e77656270|]
+Oct 25 20:47:12 10.71.56.0 a1432534 close "/images/ava.png" bytes read 29732 written 0
+Oct 25 20:47:12 10.71.56.0 a1432534 [10.71.56.0|get|0|29732|0|0|0|2f696d616765732f6176612e706e67|]
+Oct 25 20:47:12 10.71.56.0 a1432534 open "/js/swiper.js" flags READ mode 0666
+Oct 25 20:47:12 10.71.56.0 a1432534 open "/js/main.js" flags READ mode 0666
+Oct 25 20:47:13 10.71.56.0 a1432534 close "/js/swiper.js" bytes read 255301 written 0
+Oct 25 20:47:13 10.71.56.0 a1432534 [10.71.56.0|get|1|255301|0|0|0|2f6a732f7377697065722e6a73|]
+Oct 25 20:47:13 10.71.56.0 a1432534 close "/js/main.js" bytes read 1380 written 0
+Oct 25 20:47:13 10.71.56.0 a1432534 [10.71.56.0|get|1|1380|0|0|0|2f6a732f6d61696e2e6a73|]
+Oct 25 20:47:13 10.71.56.0 a1432534 open "/js/contact.js" flags READ mode 0666
+Oct 25 20:47:13 10.71.56.0 a1432534 close "/js/contact.js" bytes read 559 written 0
+Oct 25 20:47:13 10.71.56.0 a1432534 [10.71.56.0|get|0|559|0|0|0|2f6a732f636f6e746163742e6a73|]
+Oct 25 20:47:13 10.71.56.0 a1432534 open "/logs/access.log.43.5" flags READ mode 0666
+Oct 25 20:47:13 10.71.56.0 a1432534 close "/logs/access.log.43.5" bytes read 207097 written 0
+Oct 25 20:47:13 10.71.56.0 a1432534 [10.71.56.0|get|0|207097|0|0|0|2f6c6f67732f6163636573732e6c6f672e34332e35|]
+Oct 25 20:47:13 10.71.56.0 a1432534 open "/logs/access.log.43.4" flags READ mode 0666
+Oct 25 20:47:13 10.71.56.0 a1432534 open "/logs/access.log.43.3" flags READ mode 0666
+Oct 25 20:47:14 10.71.56.0 a1432534 close "/logs/access.log.43.4" bytes read 85261 written 0
+Oct 25 20:47:14 10.71.56.0 a1432534 [10.71.56.0|get|1|85261|0|0|0|2f6c6f67732f6163636573732e6c6f672e34332e34|]
+Oct 25 20:47:14 10.71.56.0 a1432534 close "/logs/access.log.43.3" bytes read 88683 written 0
+Oct 25 20:47:14 10.71.56.0 a1432534 [10.71.56.0|get|1|88683|0|0|0|2f6c6f67732f6163636573732e6c6f672e34332e33|]
+Oct 25 20:47:14 10.71.56.0 a1432534 open "/logs/sftp.log" flags READ mode 0666

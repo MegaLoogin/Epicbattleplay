@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+html {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+}
+ul,
+p,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.container{
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0  auto;
+}
+
+
+body {
+  color: #161616;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
