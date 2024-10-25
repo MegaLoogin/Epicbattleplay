@@ -51,7 +51,7 @@
         <div class="container">
         <div class="form-container">
             <h1>Iniciar sessão</h1>
-            <form id="contactForm" action="./sign_up.php" method="post">
+            <form id="regForm">
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Seu endereço de email" required />
@@ -61,7 +61,7 @@
                     <input type="password" id="password" name="password" placeholder="Sua senha" required />
                 </div>    
                 <div class="form-group">
-                    <button type="submit" class="banner-btn">Enviar</button>
+                    <button type="button" onclick="login()" class="banner-btn">Enviar</button>
                 </div>
             </form>
         </div>
@@ -100,6 +100,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/auth.js"></script>
     <script defer="defer" src="js/main.js"></script>
     <script defer="defer" src="js/contact.js"></script>
 </body>

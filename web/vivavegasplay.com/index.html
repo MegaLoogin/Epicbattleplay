@@ -44,6 +44,8 @@
             </div>
             <h1 class="header__title"><a href="./index.html">vivavegasplay</a><span
                     class="text-items mob">18+</span></h1>
+            <p class="login" style="padding-right: 10px; font-size: medium; display: none;"><span id="email_value"></span><br/> Moedas: <span id="coins_value"></span></p>
+            <p class="login" style="padding-right: 10px; font-size: medium; display: none;"><a onclick="logout()">Terminar sessão</a></p>
             <h3 class="text-item desk">18+</h3>
         </div>
     </header>
@@ -55,6 +57,7 @@
             <i></i>
             <span>jogar</span>
         </a>
+        <h3 class="banner-title">Registe-se e receba 100 moedas grátis!</h3>
     </section>
 
     <section class="info-card">
@@ -139,7 +142,8 @@
                     <a class="banner-btn" id="game1" href="#">
                         <i></i>
                         <i></i>
-                        <span>Registe-se e comece a jogar</span>
+                        <span class="logout">Junte-se à Festa</span>
+                        <span class="login">Jogar (-10 moedas)</span>
                     </a>
                 </div>
             </div>
@@ -151,14 +155,24 @@
             <iframe src="https://free-slots.games/nodevslots/elixir-slot/index.html" title="Elixir Slot - free slot " width="100%" height="100%" ></iframe>
         </div>
     </div>
+    <script src="js/auth.js"></script>
     <script>
        
         const game2 = document.getElementById('game1');
         const popup = document.getElementById('popup');
         const closeBtn = document.getElementById('closeBtn');
 
-        game2.addEventListener('click', function() {
-            popup.style.display = 'flex'; 
+        game2.addEventListener('click', async function() {
+            const res = await Api.subCoins(10);
+
+            console.log(res, res?.status === 'success', res == null, res?.status === 'success' || res == null)
+
+            if(res?.status === 'success' || res == null){
+                onloadfunc();
+                popup.style.display = 'flex'; 
+            }else{
+                alert("Not enough coins!");
+            }
         });
 
         closeBtn.addEventListener('click', function() {
@@ -259,6 +273,7 @@
     </style>
     <script>
         window.onload = function () {
+            onloadfunc();
             const cookieModal = document.getElementById('cookieModal');
             const acceptCookiesButton = document.getElementById('acceptCookies');
 
