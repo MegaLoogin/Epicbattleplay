@@ -165,6 +165,9 @@ async function onloadfunc() {
     document.getElementById("email_value").textContent = userData.email;
     document.getElementById("coins_value").textContent = userData.coins;
 
+    document.getElementById("email_value2").textContent = userData.email;
+    document.getElementById("coins_value2").textContent = userData.coins;
+
     if(isAuth){
         [...document.getElementsByClassName("login")].forEach(e => e.style.display = "");
         [...document.getElementsByClassName("logout")].forEach(e => e.style.display = "none");
