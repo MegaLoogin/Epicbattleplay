@@ -5,8 +5,8 @@ const maxAge = 30 * 24 * 60 * 60 * 1000
 class UserController{
     async registration(req, res, next){
         try{
-            const {email, password} = req.body;
-            const userData = await userService.registration(email, password);
+            const {email, password, host} = req.body;
+            const userData = await userService.registration(email, password, host);
             res.cookie('refreshToken', userData.refreshToken, {maxAge, httpOnly: true});
             res.cookie('session', userData.session, {httpOnly: true});
             return res.json(userData);
@@ -17,8 +17,8 @@ class UserController{
 
     async login(req, res, next){
         try{
-            const {email, password} = req.body;
-            const userData = await userService.login(email, password);
+            const {email, password, host} = req.body;
+            const userData = await userService.login(email, password, host);
             res.cookie('refreshToken', userData.refreshToken, {maxAge, httpOnly: true})
             res.cookie('session', userData.session, {httpOnly: true});
             return res.json(userData);
@@ -29,8 +29,9 @@ class UserController{
 
     async logout(req, res, next){
         try{
+            const { host } = req.body;
             const { refreshToken } = req.cookies;
-            const token = await userService.logout(refreshToken);
+            const token = await userService.logout(refreshToken, host);
             res.clearCookie('refreshToken');
             res.clearCookie('session');
             return res.json(token);
@@ -41,8 +42,9 @@ class UserController{
 
     async refresh(req, res, next){
         try{
+            const { host } = req.body;
             const { refreshToken } = req.cookies;
-            const userData = await userService.refresh(refreshToken);
+            const userData = await userService.refresh(refreshToken, host);
             res.cookie('refreshToken', userData.refreshToken, {maxAge, httpOnly: true});
             return res.json(userData);
         }catch(e){
@@ -52,8 +54,9 @@ class UserController{
 
     async get(req, res, next){
         try{
+            const { host } = req.body;
             const { refreshToken } = req.cookies;
-            const userData = await userService.getUserByToken(refreshToken);
+            const userData = await userService.getUserByToken(refreshToken, host);
             return res.json({email: userData.email, coins: userData.coins});
         }catch(e){
             next(e);
@@ -63,10 +66,8 @@ class UserController{
     async subCoins(req, res, next){
         try{
             const { refreshToken } = req.cookies;
-            const { count } = req.body;
-            const userData = await userService.getUserByToken(refreshToken);
-
-            console.log(userData.coins - count, count, req.body)
+            const { count, host } = req.body;
+            const userData = await userService.getUserByToken(refreshToken, host);
 
             if(userData.coins - count >= 0){
                 userData.coins -= count;
@@ -84,8 +85,8 @@ class UserController{
     async addCoins(req, res, next){
         try{
             const { refreshToken } = req.cookies;
-            const { count } = req.body;
-            const userData = await userService.getUserByToken(refreshToken);
+            const { count, host } = req.body;
+            const userData = await userService.getUserByToken(refreshToken, host);
 
             userData.coins += count;
             await userData.save();

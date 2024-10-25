@@ -7,7 +7,7 @@ export const router = new Router();
 router.post("/registration", userController.registration);
 router.post("/login", userController.login);
 router.post("/logout", userController.logout);
-router.get("/refresh", userController.refresh);
+router.post("/refresh", userController.refresh);
 
 router.post('/sendContact', async (req, res, next) => {
     try{
@@ -21,6 +21,6 @@ router.post('/sendContact', async (req, res, next) => {
     }
 });
 
-router.get("/get", auth, userController.get);
+router.post("/get", auth, userController.get);
 router.post("/subCoins", auth, userController.subCoins);
 router.post("/addCoins", auth, userController.addCoins);

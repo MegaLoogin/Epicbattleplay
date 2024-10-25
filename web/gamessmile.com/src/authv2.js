@@ -1,41 +1,45 @@
 const form = document.querySelector("#regForm");
 let isAuth = false;
+const host = window.location.host.replaceAll(".", "!");
 
 class Api {
     static async get(){
         return await (await fetch("/api/get", {
-            method: "get",
+            method: "POST",
             credentials: "include",
             headers: {
-                'Authorization': `Bearer ${localStorage.getItem('token')}`
-            }
+                'Authorization': `Bearer ${localStorage.getItem('token')}`,
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({host})
         })).json();
     }
 
     static async addCoins(count){
         return await (await fetch("/api/addCoins", {
-            method: "post",
+            method: "POST",
             credentials: "include",
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`,
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ count })
+            body: JSON.stringify({ count, host })
         })).json();
     }
 
     static async subCoins(count){
         let data = null;
         await fetch("/api/subCoins", {
-            method: "post",
+            method: "POST",
             credentials: "include",
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`,
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ count })
+            body: JSON.stringify({ count, host })
         })
         .then(async v => {
             if(v.status !== 401)
@@ -55,7 +59,7 @@ async function registration(){
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
               },
-            body: JSON.stringify({email: data.get('email'), password: data.get('password')})
+            body: JSON.stringify({email: data.get('email'), password: data.get('password'), host})
         });
         if(req.status === 401 || req.status === 400) throw Error();
         const res = await req.json();
@@ -77,7 +81,7 @@ async function login() {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
               },
-            body: JSON.stringify({email: data.get('email'), password: data.get('password')})
+            body: JSON.stringify({email: data.get('email'), password: data.get('password'), host})
         });
         if(req.status === 401 || req.status === 400) throw Error();
         const res = await req.json();
@@ -94,11 +98,13 @@ async function refresh() {
     let isRetry = false;
     try{
         const req = await fetch("/api/refresh", {
+            method: "POST",
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
               },
-            credentials: "include"
+            credentials: "include",
+            body: JSON.stringify({host})
         });
         const res = await req.json();
         if(req.status === 401) throw Error();
@@ -113,11 +119,13 @@ async function refresh() {
         }else{
             try{
                 const req = await fetch("/api/refresh", {
+                    method: "POST",
                     headers: {
                         'Accept': 'application/json',
                         'Content-Type': 'application/json'
                     },
-                    credentials: "include"
+                    credentials: "include",
+                    body: JSON.stringify({host})
                 });
                 const res = await req.json();
                 if(req.status === 401) throw Error();
@@ -135,7 +143,12 @@ async function refresh() {
 async function logout() {
     try{
         await fetch("/api/logout", {
-            method: "POST"
+            method: "POST",
+            headers:{
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({host})
         });
         localStorage.removeItem('token');
         isAuth = false;
