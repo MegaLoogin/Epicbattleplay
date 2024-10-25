@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/drawer-menu.css" />
 </head>
 
-<body>
+<body onload="onloadfunc()">
     <header class="header">
         <div class="container">
             <div class="menu-toggle__icon" onclick="toggleMenu()"><img src="./images/menu.png" alt=""></div>
@@ -41,6 +41,8 @@
             </div>
             <h1 class="header__title"><a href="./index.html">socialvegasfun</a><span
                     class="text-items mob">18+</span></h1>
+            <h3 class="login"><span id="email_value"></span> Moedas: <span id="coins_value"></span></h3>
+            <a class="login" onclick="logout()">Terminar sessão</a>
             <h3 class="text-item desk">18+</h3>
         </div>
     </header>
@@ -122,14 +124,23 @@
             <iframe src="https://free-slots.games/nodevslots/book/index.html" title="Book of Ra Slot - free slot" width="100%" height="100%"></iframe>
         </div>
     </div>
+    <script src="js/auth.js"></script>
     <script>
        
         const game2 = document.getElementById('game2');
         const popup = document.getElementById('popup');
         const closeBtn = document.getElementById('closeBtn');
 
-        game2.addEventListener('click', function() {
-            popup.style.display = 'flex'; 
+        game2.addEventListener('click', async function() {
+            const res = await Api.subCoins(10);
+
+            console.log(res, res?.status === 'success', res == null, res?.status === 'success' || res == null)
+
+            if(res?.status === 'success' || res == null){
+                popup.style.display = 'flex'; 
+            }else{
+                alert("Not enough coins!");
+            }
         });
 
         closeBtn.addEventListener('click', function() {
