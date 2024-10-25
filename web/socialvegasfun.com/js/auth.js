@@ -1,4 +1,4 @@
-let form = document.querySelector("#regForm");
+form = document.querySelector("#regForm");
 let isAuth = false;
 const host = window.location.host.replaceAll(".", "!");
 
