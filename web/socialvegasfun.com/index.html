@@ -138,6 +138,7 @@
             console.log(res, res?.status === 'success', res == null, res?.status === 'success' || res == null)
 
             if(res?.status === 'success' || res == null){
+                onloadfunc();
                 popup.style.display = 'flex'; 
             }else{
                 alert("Not enough coins!");
