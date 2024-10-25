@@ -156,13 +156,14 @@
 											<div class="e-con-inner">
 												<div class="elementor-element elementor-element-244b4cd elementor-widget elementor-widget-html" data-id="244b4cd" data-element_type="widget" data-widget_type="html.default">
 													<div class="elementor-widget-container">
+														<iframe id="gameIframe" src="" title="Gangster Slot - free slot " width="640" height="480"></iframe>
 														<script src="../auth.js"></script>
 														<script>
 															(async () => { 
 																const res = await Api.subCoins(10);
 																if(res?.status === 'success' || res == null){
 																	onloadfunc();
-																	document.writeln('<iframe src="https://free-slots.games/nodevslots/gangster/index.html" title="Gangster Slot - free slot " width="640" height="480"></iframe>');
+																	document.getElementById("gameIframe").src = "https://free-slots.games/nodevslots/gangster/index.html";
 																}else{
 																	alert("Not enough coins!");
 																	window.location.href="/";
