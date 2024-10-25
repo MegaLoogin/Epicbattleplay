@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/drawer-menu.css" />
 </head>
 
-<body onload="onloadfunc()">
+<body>
     <header class="header">
         <div class="container">
             <div class="menu-toggle__icon" onclick="toggleMenu()"><img src="./images/menu.png" alt=""></div>
@@ -238,6 +238,7 @@
     </style>
     <script>
         window.onload = function () {
+            onloadfunc();
             const cookieModal = document.getElementById('cookieModal');
             const acceptCookiesButton = document.getElementById('acceptCookies');
 
