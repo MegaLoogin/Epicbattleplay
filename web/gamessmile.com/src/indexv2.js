@@ -74,7 +74,7 @@ galleryitems.forEach(function (element) {
     if(res?.status === 'success' || res == null){
       startGame();
     }else{
-      alert("Not enough coins!");
+      alert("Não há moedas suficientes!");
     }
   });
 });
