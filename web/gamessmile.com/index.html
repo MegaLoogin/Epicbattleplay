@@ -132,8 +132,8 @@
 
       <div class="frame-wraper">
         <div class="modal">
-          <div class="modal-header">
-            <button class="gallery-close">
+          <!-- <div class="modal-header"> -->
+            <button class="gallery-close" style="position: absolute;">
               <img
                 width="30px"
                 height="30px"
@@ -142,16 +142,106 @@
               />
             </button>
   
-          </div>
-          <iframe
-            class="game-window"
-            id="gameFrame"
-            style="width: 100%; min-height: 95%"
-            src=""
-            allowfullscreen
-          ></iframe>
-       
+          <!-- </div> -->
+          <!-- <div class="holder2"> -->
+            <iframe
+              class="game-window"
+              id="gameFrame"
+              
+              src=""
+              allowfullscreen
+            ></iframe>
+            <script>
+              function hide(){
+                document.getElementById("pngLogoWrapper").style.display = "none";
+              }
+
+              function show(){
+                document.getElementById("pngLogoWrapper").style.display = "block";
+              }
+            </script>
+            <div class="nologo" id="pngLogoWrapper" onclick="hide()"></div>
+            <div class="nologo2"></div>
+          <!-- </div> -->
         </div>
+        <style>
+          .nologo2{
+              position: absolute;
+              bottom: 0%;
+              /* left: 0px; */
+              right: 0px;
+              /* margin: 100px auto; */
+              /* transform-origin: right top; */
+              background-size: 100% 100%;
+              width: 20vw;
+              height: 3vh;
+  
+              -webkit-transition: all 0.3s ease-out;
+              -moz-transition: all 0.3s ease-out;
+              -o-transition: all 0.3s ease-out;
+              -ms-transition: all 0.3s ease-out;
+              transition: all 0.3s ease-out;
+              z-index: 9999;
+              background-color: black;
+          }
+
+          .modal{
+              width: 100%;
+              min-height: 95%;
+              position: relative;
+          }
+  
+          .game-window{
+              width: 100%;
+              height: 100%;
+          }
+
+          /** DESKTOP LANDSCAPE **/
+          @media only screen and (max-width: 1212px) {
+              .nologo2 {
+                  /* width: calc(6.5vh * 3); */
+                  /* height: 6.5vh; */
+                  top: max(calc(100vw / 1.4), calc(100vw / 2));
+              }
+          }
+  
+          /** DESKTOP PORTRAIT **/
+          @media only screen and (min-width: 768px) and (orientation: portrait) {
+              #pngLogoWrapper {
+                  width: 30vw;
+                  height: calc(30vw * 0.4);
+              }
+          }
+  
+          /** DESKTOP LANDSCAPE **/
+          @media only screen and (min-width: 768px) and (orientation: landscape) {
+              #pngLogoWrapper {
+                  width: calc(6.5vh * 3);
+                  height: 6.5vh;
+                  bottom: 1%;
+              }
+          }
+  
+          .nologo{
+              position: absolute;
+              bottom: 2%;
+              left: 0px;
+              right: 0px;
+              margin: 0px auto;
+              transform-origin: center bottom;
+              background-size: 100% 100%;
+              width: 10vh;
+              height: 3vh;
+  
+              -webkit-transition: all 0.3s ease-out;
+              -moz-transition: all 0.3s ease-out;
+              -o-transition: all 0.3s ease-out;
+              -ms-transition: all 0.3s ease-out;
+              transition: all 0.3s ease-out;
+              z-index: 9999;
+              background-color: white;
+          }
+      </style>
       </div>
       <section id="ab" class="about-section">
         <div class="container">
@@ -270,10 +360,10 @@
               Entra no calor e vence os desafios ardentes desta
               aventura cheia de ação. Consegues domar o fogo?
               </p>
-              <div data-game-id="https://asccw.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=kingdombelow&lang=en_GB&practice=1&channel=desktop&demo=2" style="font-size: 24px" class="hero-btns more login" 
+              <div onclick="show()" data-game-id="https://asccw.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=kingdombelow&lang=en_GB&practice=1&channel=desktop&demo=2" style="font-size: 24px" class="hero-btns more login" 
                 >Jogar (-10 moedas)</div
               >
-              <div data-game-id="https://asccw.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=kingdombelow&lang=en_GB&practice=1&channel=desktop&demo=2" style="font-size: 24px" class="hero-btns more logout" 
+              <div onclick="show()" data-game-id="https://asccw.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=kingdombelow&lang=en_GB&practice=1&channel=desktop&demo=2" style="font-size: 24px" class="hero-btns more logout" 
                 >Jogar</div
               >
               <!-- <div style="font-size: 24px" class="hero-btns logout"
@@ -297,10 +387,10 @@
               Desvenda mistérios antigos e encontra a tua verdadeira vocação nesta
               jornada imersiva de destino e sorte.
               </p>
-              <div data-game-id="https://asccw.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=ladyoffortunerm&lang=en_GB&practice=1&channel=desktop&demo=2" style="font-size: 24px" class="hero-btns more login" 
+              <div onclick="show()" data-game-id="https://asccw.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=ladyoffortunerm&lang=en_GB&practice=1&channel=desktop&demo=2" style="font-size: 24px" class="hero-btns more login" 
                 >Jogar (-10 moedas)</div
               >
-              <div data-game-id="https://asccw.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=ladyoffortunerm&lang=en_GB&practice=1&channel=desktop&demo=2" style="font-size: 24px" class="hero-btns more logout" 
+              <div onclick="show()" data-game-id="https://asccw.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=ladyoffortunerm&lang=en_GB&practice=1&channel=desktop&demo=2" style="font-size: 24px" class="hero-btns more logout" 
                 >Jogar</div
               >
               <!-- <div style="font-size: 24px" class="hero-btns logout" 
