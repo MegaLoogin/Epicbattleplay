@@ -175,7 +175,7 @@ section {
   display: flex !important;
   flex-wrap: wrap !important;
   gap: 30px;
-  justify-content: space-between;
+  justify-content: center;
 }
 .gallery-list__item {
   width: 100% !important;
