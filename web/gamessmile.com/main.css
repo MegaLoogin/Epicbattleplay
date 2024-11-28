@@ -76,7 +76,7 @@ ol[class] {
 section {
   padding-top: 50px;
   padding-bottom: 50px;
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
+  box-shadow: 0 4px 15px #1b4045;
 }
 .container {
   width: 100%;
@@ -225,7 +225,8 @@ a:focus {
   display: none;
 
   width: 100%;
-  background: rgba(9, 8, 47, 0.9);
+  /* background: rgba(9, 8, 47, 0.9); */
+  background-color: #1b4045;
   color: #e8e6e6;
   text-align: center;
   z-index: 200;
@@ -343,11 +344,14 @@ a:focus {
   display: none;
 }
 .main-content {
-  background-color: #0b1934;
+  /* background-color: #0b1934; */
+  background-color: #2b6069;
+  /* background: linear-gradient(99.37deg, #12641a 11.05%, #778c4e 47.06%); */
 }
 .footer {
   padding: 15px 0px;
-  background: #090a31;
+  /* background: #090a31; */
+  background-color: #1b4045;
 }
 
 .footer__list {
@@ -485,11 +489,38 @@ a:focus {
   width: 100%;
   padding: 30px;
   font-size: 24px;
-  background-color: rgba(11, 19, 52, 0.9);
+  /* background-color: rgba(11, 19, 52, 0.9); */
+
+  margin-bottom: 30px;
+  text-align: left;
+  z-index: 1;
+}
+
+.page-title-bg {
+  position: relative;
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+  padding: 30px;
+  font-size: 24px;
+  /* background-color: rgba(11, 19, 52, 0.9); */
 
   margin-bottom: 30px;
   text-align: left;
 }
+
+.page-title-bg ::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-color: #1b4045d2;
+  filter: blur(20px);
+  z-index: -1;
+}
+
 @media screen and (min-width: 519px) {
   .page-title {
     font-size: 54px;
@@ -503,7 +534,7 @@ a:focus {
 }
 
 .hero {
-  background-image: url("./src/images/bg.jpg");
+  background-image: url("./src/images/bg2.png");
   background-size: cover;
   background-position: center;
   min-height: 400px;
@@ -704,7 +735,7 @@ a > .lpgo-text {
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
+  box-shadow: 0 4px 15px #1b4045;
   text-align: left;
 }
 
@@ -779,7 +810,7 @@ a > .lpgo-text {
   background-color: #080d20;
   color: white;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
+  box-shadow: 0 4px 15px #1b4045;
   text-align: center;
 }
 
@@ -831,7 +862,7 @@ a > .lpgo-text {
   max-width: 600px;
   margin: 0 auto;
 }
-@keyframes glowing {
+/* @keyframes glowing {
   0% {
     text-shadow: 0 0 5px #004080, 0 0 10px #004080, 0 0 15px #00bfff,
       0 0 20px #00bfff;
@@ -840,7 +871,7 @@ a > .lpgo-text {
     text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff, 0 0 30px #00ffff,
       0 0 40px #00ffff;
   }
-}
+} */
 .img-herocnt {
   display: flex;
   justify-content: space-between;
@@ -874,7 +905,7 @@ a > .lpgo-text {
 .hero-btns {
   padding: 15px 20px;
   border-radius: 50px;
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
+  box-shadow: 0 4px 15px #1b4045;
   animation: glowing 1.5s infinite alternate;
   font-size: 54px;
   text-decoration: none;
@@ -892,10 +923,10 @@ a > .lpgo-text {
 .contact-us {
   padding: 60px 20px;
   background-color: #cecece;
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
+  box-shadow: 0 4px 15px #1b4045;
   border-radius: 10px;
   max-width: 1200px;
-  margin: 0px auto;
+  margin: 0px;
 }
 
 .container-2 {
@@ -985,14 +1016,14 @@ button:hover {
 }
 
 /* Эффекты подсветки */
-@keyframes glowText {
+/* @keyframes glowText {
   0% {
       text-shadow: 0 0 5px #007BFF, 0 0 10px #007BFF, 0 0 15px #00bfff;
   }
   100% {
       text-shadow: 0 0 10px #00bfff, 0 0 20px #007BFF, 0 0 30px #00ffff;
   }
-}
+} */
 
 .contact-info h2:hover {
   animation: glowText 1s infinite alternate;
@@ -1003,5 +1034,5 @@ button:hover {
 }
 
 .contact-form input:focus, .contact-form textarea:focus {
-  box-shadow: 0 2px 15px rgba(0, 123, 255, 0.5);
+  box-shadow: 0 2px 15px #1b4045;
 }
