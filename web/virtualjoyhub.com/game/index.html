@@ -55,6 +55,18 @@
         <script type="text/javascript" src="js/CFicheBut.js"></script>
     </head>
     <body ondragstart="return false;" ondrop="return false;" >
+        <script src="../src/authv2.js"></script>
+        <script>
+            (async () => {
+                const res = await Api.subCoins(10);
+                if(res?.status === 'success' || res == null){
+                    onloadfunc();
+                }else{
+                    alert("Not enought coins!");
+                    window.location.href="/";
+                }
+            })();
+        </script>
         <div style="position: fixed; background-color: transparent; top: 0px; left: 0px; width: 100%; height: 100%"></div>
         <script>
             $(document).ready(function () {
