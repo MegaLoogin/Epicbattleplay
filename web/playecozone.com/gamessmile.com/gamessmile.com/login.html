@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="gamessmile, social casino games, free social casino games, social gaming, online casino games, no real-money gambling, free poker, virtual casino, online gaming community, play for fun, slot machines, card games, multiplayer casino games, free online games, social gambling, casino entertainment, connect with friends, leaderboards, safe gaming, interactive gaming, free slots, UK players, British casino"
+    />
+
+    <meta
+      name="description"
+      content="Explore a diverse range of free social casino games at gamessmile! Immerse yourself in slots, blackjack, poker, and more, all without the need for real-money bets. Enjoy unlimited fun, connect with friends, and climb the leaderboards in a vibrant and secure gaming community. Join Gamessmile now for the ultimate social casino experience!"
+    />
+
+    <title>Gamessmile</title>
+    <link rel="icon" type="image/x-icon" href="./src/images/logo.png" />
+    
+
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baumans&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  </head>
+  <body onload="onloadfunc()">
+    <header id="header" class="header">
+      <div class="container header-wraper">
+        <a href="./index.html" class="logo-link"
+          ><img
+            style="margin-right: 10px"
+            width="30px"
+            class="logo-img"
+            src="./src/images/logo.png"
+            alt=""
+          />
+          Gamessmile</a
+        >
+
+        <nav class="header__nav">
+          <ul class="header__nav__list">
+            <li class="header__nav__list__item">
+              <a class="header__nav__list__item__link" href="./index.html">Início</a>
+            </li>
+            <li class="header__nav__list__item">
+              <a class="header__nav__list__item__link" href="./contact.html"
+                >Contacto</a
+              >
+            </li>
+            <li class="header__nav__list__item">
+              <a class="header__nav__list__item__link" href="#games">Jogos</a>
+            </li>
+            <li class="header__nav__list__item logout">
+              <a class="header__nav__list__item__link" href="./signup.html">Inscrever-se</a>
+            </li>
+            <li class="header__nav__list__item logout">
+              <a class="header__nav__list__item__link" href="./login.html">Iniciar sessão</a>
+            </li>
+            <li class="header__nav__list__item login">
+              <a class="header__nav__list__item__link" onclick="logout()">Sair</a>
+            </li>
+            <li class="header__nav__list__item">
+              <p class="last-item" href="">18+</p>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <header class="header-drop">
+      <div class="container">
+        <div class="header-drop__wraper">
+          <a href="./index.html" style="margin-right: 10px" class="logo-link"
+            >Gamessmile</a
+          >
+
+          <img
+            class="header-drop__icon"
+            width="30px"
+            height="30px"
+            src="./src/images/close.svg"
+            alt="close"
+          />
+          <img
+            width="30px"
+            height="30px"
+            class="header-drop__icon-open"
+            src="./src/images/burger.svg"
+            alt="burger"
+          />
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="header-drop__nav-wraper">
+        <nav class="header-drop__nav">
+          <ul class="header-drop__nav__list">
+            <li class="header__nav__list__item">
+              <a class="header__nav__list__item__link" href="./index.html"
+                >Início</a
+              >
+            </li>
+            <li class="header__nav__list__item">
+              <a class="header__nav__list__item__link" href="./contact.html"
+                >Contacto</a
+              >
+            </li>
+            <li class="header__nav__list__item">
+              <a class="header__nav__list__item__link" href="#games">Jogos</a>
+            </li>
+            <li class="header__nav__list__item">
+              <a class="header__nav__list__item__link" href="">18+</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <main class="main-content">
+      <section id="hero" class="hero">
+        <div class="container">
+          
+
+           <div class="img-herocnt">
+            <!-- <img class="imgg1" src="./src/images/girl1.png" alt="girl">
+
+            <img src="./src/images/girl2.png" alt="girl"> -->
+
+            <section class="contact-us">
+              <div class="container container-2">
+                  
+                <div class="contact-form">
+                  <h1>Iniciar sessão</h1>
+                  <br/>
+                    <form id="regForm">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email" placeholder="Introduza o seu e-mail" required>
+                            <p id="result"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Palavra-passe</label>
+                            <input type="password" id="password" name="password" placeholder="Introduza a sua palavra-passe" required>
+                            <p id="result2"></p>
+                        </div>
+                        <button type="button" onclick="if(validEmail && validPass) login()">Iniciar sessão</button>
+                    </form>
+                </div>
+                <script>
+                let validEmail, validPass = false;
+                const validateEmail = (email) => {
+                  return String(email)
+                    .toLowerCase()
+                    .match(
+                      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                    );
+                };
+              
+                const validate = () => {
+                  const $result = $('#result');
+                  const email = $('#email').val();
+                  $result.text('');
+                  validEmail = validateEmail(email)
+                
+                  if(validEmail){
+                    $result.text(email + ' é válido.');
+                    $result.css('color', 'green');
+                  } else{
+                    $result.text(email + ' é inválido.');
+                    $result.css('color', 'red');
+                  }
+                  return false;
+                }
+
+                const validatePas = () => {
+                  const $result = $('#result2');
+                  const pass = $('#password').val();
+                  $result.text('');
+
+                  validPass = pass.length >= 8
+                
+                  if(validPass){
+                    $result.text('A palavra-passe é boa.');
+                    $result.css('color', 'green');
+                  } else{
+                    $result.text('Palavra-passe curta!');
+                    $result.css('color', 'red');
+                  }
+                  return false;
+                }
+              
+                $('#email').on('input', validate);
+                $('#password').on('input', validatePas);
+                </script>
+          
+                 
+              </div>
+             </div>
+          </section>
+           </div>
+
+        </div>
+      </section>
+
+      <div class="frame-wraper">
+        <div class="modal">
+          <div class="modal-header">
+            <button class="gallery-close">
+              <img
+                width="30px"
+                height="30px"
+                src="./src/images/close.svg"
+                alt=""
+              />
+            </button>
+          </div>
+
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    
+    </main>
+    <footer class="footer" id="footer">
+      <section id="disclaimer-section">
+        <div class="container">
+            <h2 class="disclaimer-title" style="color: #fff; animation: glowing 1.5s infinite alternate;">Declaração de exoneração de responsabilidade</h2>
+            <p style="font-size: 24px; color: #fff;" class="disclaimer-text">
+                Os jogos sociais oferecem uma mistura divertida de jogos tradicionais de casino com os elementos interactivos das redes sociais. Estes jogos têm um objetivo puramente lúdico e não envolvem apostas financeiras reais. Embora reproduzam a emoção dos rolos giratórios ou dos jogos de cartas, são estritamente divertidos e concebidos para os jogadores que preferem evitar os riscos associados aos jogos de azar com dinheiro real. Estas plataformas promovem um ambiente seguro e inclusivo para os utilizadores se envolverem em jogos cativantes e comunidades animadas. Os jogadores podem partilhar dicas, celebrar vitórias e desfrutar de uma competição amigável sem quaisquer implicações financeiras.
+            </p>
+        </div>
+    </section>
+    
+      <div class="container container-footer">
+        <ul class="footer__list">
+          <li class="footer__list__item">
+            <a class="footer__list__item__link" href="./terms.html"
+              >Termos e Condições
+            </a>
+          </li>
+          <li class="footer__list__item">
+            <a class="footer__list__item__link" href="./privacy.html"
+              >Política de privacidade
+            </a>
+          </li>
+        </ul>
+        <div class="container custom-class-y49gdg">
+          <ul class="bottom-list custom-class-ehr9v">
+            <!-- <li class="custom-class-szuix"><a href="https://www.gambleaware.org/"><img width="50px" src="./src/images/f1.png" alt="gambling"></a></li> -->
+            <li class="custom-class-3ig80v"><a href="https://www.safergamblingstandard.org.uk/"><img width="50px" src="./src/images/f2.png" alt="gambling"></a></li>
+            <li class="custom-class-naehg8"><img width="50px" src="./src/images/f3.png" alt="only 18+"></li>
+          </ul>
+        </div>
+        <style>
+          .custom-class-ehr9v {
+            font-family: "Nanum Myeongjo", serif;
+            font-optical-sizing: auto;
+            line-height: 1.5;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+            padding: 0;
+            text-align: left;
+            list-style: none;
+          }
+        </style>
+        <div style="color: #fff;">© 2024 MIRIDIANIUM LIMITED | All rights reserved. Website developed and owned by MIRIDIANIUM LIMITED</div>
+      </div>
+    </footer>
+    <script>
+      // Остановка и запуск анимации при наведении с помощью JavaScript
+const trackTop = document.querySelector('.carousel-track-top');
+const trackBottom = document.querySelector('.carousel-track-bottom');
+
+trackTop.addEventListener('mouseenter', () => {
+    trackTop.style.animationPlayState = 'paused';
+});
+trackTop.addEventListener('mouseleave', () => {
+    trackTop.style.animationPlayState = 'running';
+});
+
+trackBottom.addEventListener('mouseenter', () => {
+    trackBottom.style.animationPlayState = 'paused';
+});
+trackBottom.addEventListener('mouseleave', () => {
+    trackBottom.style.animationPlayState = 'running';
+});
+
+    </script>
+    <script src="./src/indexv2.js"></script>
+    <script src="./src/authv2.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://www.virtualjoyhub.com/sitemap.xml

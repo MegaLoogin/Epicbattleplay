@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>activeplayland</title>
+    <meta
+      name="description"
+      content="activeplayland presents an exciting social gaming experience with captivating games, vibrant community interaction, and nonstop fun. Explore casino-inspired games, slot adventures, and interactive multiplayer challenges in a secure and entertaining virtual space."
+    />
+
+    <meta
+      name="keywords"
+      content="social gaming experience, online fun, free virtual games, slot adventures, multiplayer gaming, social entertainment, engaging online platform, immersive casino games, interactive community, safe gaming environment"
+    />
+    <meta name="author" content="activeplayland" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./img/1.webp" type="image/x-icon" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-con">
+        <div class="logo">
+          <img
+            src="./img/1.webp"
+            alt="Players"
+            class="stats-icon"
+          />activeplayland
+        </div>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#games">Games</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="menu-btn">☰</button>
+      </div>
+    </header>
+
+    <div class="mobile-menu-overlay"></div>
+    <nav class="mobile-menu">
+      <button class="close-menu"><img src="./img/close.webp" alt="" /></button>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./index.html#games">Games</a></li>
+        <li><a href="./index.html#about">About</a></li>
+        <li><a href="./index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <iframe src="./html5/index.html" width="100%" height="100%"></iframe>
+
+    <footer class="detailed-footer">
+      <div class="container">
+        <div class="contact-info">
+          <h3>Contact Details</h3>
+          <p>
+            Email:
+            <a href="mailto:contact@activeplayland.com" class="contact-email"
+              >contact@activeplayland.com</a
+            >
+          </p>
+          <p>
+            Phone:
+            <a href="tel:+44125896687" class="contact-phone">+44 1258 96687</a>
+          </p>
+          <p>
+            Address:
+            <a
+              href="https://www.google.com/maps?q=Isleworth+TW7+5QD,+United+Kingdom"
+              target="_blank"
+              class="contact-address"
+            >
+              Isleworth TW7 5QD, United Kingdom
+            </a>
+          </p>
+        </div>
+
+        <!-- Верхняя секция с ссылками -->
+        <div class="footer-top">
+          <div class="footer-links">
+            <a href="./terms.html" class="footer-link">Terms of Service</a>
+            <a href="./ref.html" class="footer-link">Refund Policy</a>
+            <a href="./privacy.html" class="footer-link">Privacy Policy</a>
+            <a href="./cookie.html" class="footer-link">Cookies Policy</a>
+          </div>
+        </div>
+
+        <!-- Средняя секция: Контактная информация и соцсети -->
+
+        <!-- Нижняя секция: Копирайт -->
+        <div class="footer-bottom">
+          <p>© 2024 Your activeplayland . All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const rows = 4; // Количество строк в спрайте
+      const frameHeight = 128; // Высота одного кадра (иконки)
+      const spinDuration = 2000; // Продолжительность вращения слота (в миллисекундах)
+
+      let spinning = false; // Флаг для предотвращения повторного клика во время вращения
+
+      // Генерация случайной позиции по вертикали
+      function getRandomFrameY() {
+        const row = Math.floor(Math.random() * rows);
+        return row * frameHeight * -1; // Смещение по вертикали
+      }
+
+      // Старт вращения
+      function spinSlots() {
+        if (spinning) return; // Если уже вращается, ничего не делаем
+        spinning = true;
+
+        const slots = ["slot1", "slot2", "slot3"];
+
+        // Сбрасываем все слоты в исходное положение
+        slots.forEach((slotId) => {
+          const slot = document.getElementById(slotId);
+          slot.style.backgroundPositionY = `0px`; // Ставим в начальное положение
+          slot.classList.add("spin-animation"); // Добавляем анимацию
+        });
+
+        // Останавливаем все слоты через заданное время
+        setTimeout(() => {
+          // Модификация, чтобы финишировать на -197px
+          const finalPositionY = -197; // Остановка на заданной позиции
+
+          slots.forEach((slotId) => {
+            const slot = document.getElementById(slotId);
+            slot.classList.remove("spin-animation"); // Убираем анимацию
+            slot.style.transition = "background-position-y 0.5s ease-out"; // Добавляем плавность остановки
+            slot.style.backgroundPositionY = `${finalPositionY}px`; // Устанавливаем итоговую позицию
+          });
+
+          // После того как анимация остановки завершена, отключаем флаг
+          setTimeout(() => {
+            spinning = false; // Снимаем флаг, чтобы можно было запустить снова
+
+            // Переход на раздел #games
+            document.getElementById("games").scrollIntoView({
+              behavior: "smooth", // Плавная прокрутка
+              block: "start", // Прокрутка до начала секции
+            });
+          }, 300); // Время на остановку анимации
+        }, spinDuration); // Вращение происходит 2 секунды
+      }
+    </script>
+    <script src="./authv2.js"></script>
+    <script>
+      (async () => {
+          try {
+              const res = await Api.subCoins(10); // Предполагаем, что Api.subCoins возвращает Promise
+              if (res?.status === 'success' || res == null) {
+                  onloadfunc(); // Если запрос успешный, вызываем функцию onloadfunc
+              } else {
+                  alert("Não há moedas suficientes!"); // Если недостаточно монет
+                  window.location.href = "/"; // Возвращаемся на главную страницу
+              }
+          } catch (error) {
+              console.error("Произошла ошибка:", error); // Обрабатываем возможные ошибки
+              // window.location.href = "/"; // В случае ошибки также возвращаемся на главную
+          }
+      })();
+    </script>
+
+  </body>
+</html>

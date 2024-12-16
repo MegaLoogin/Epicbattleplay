@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>playecozone</title>
+    <meta
+      name="description"
+      content="playecozone presents an exciting social gaming experience with captivating games, vibrant community interaction, and nonstop fun. Explore casino-inspired games, slot adventures, and interactive multiplayer challenges in a secure and entertaining virtual space."
+    />
+
+    <meta
+      name="keywords"
+      content="social gaming experience, online fun, free virtual games, slot adventures, multiplayer gaming, social entertainment, engaging online platform, immersive casino games, interactive community, safe gaming environment"
+    />
+    <meta name="author" content="playecozone" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/1.webp" type="image/x-icon" />
+  </head>
+  <body onload="onloadfunc()">
+    <header class="header">
+      <div class="container header-con">
+        <div class="logo">
+          <img
+            src="./img/1.webp"
+            alt="Players"
+            class="stats-icon"
+          />playecozone
+        </div>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#games">Games</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="header__nav__list__item logout">
+              <a class="header__nav__list__item__link" href="./signup.html">Sign up</a>
+          </li>
+          <li class="header__nav__list__item logout">
+              <a class="header__nav__list__item__link" href="./login.html">Log in</a>
+          </li>
+          <li class="header__nav__list__item login">
+              <p class="account_info"><span id="email_value"></span><br/> Coins: <span id="coins_value"></span></p>
+              <a class="header__nav__list__item__link" onclick="logout()">Log out</a>
+          </li>
+          </ul>
+        </nav>
+        <button class="menu-btn">☰</button>
+      </div>
+    </header>
+
+    <div class="mobile-menu-overlay"></div>
+    <nav class="mobile-menu">
+      <button class="close-menu"><img src="./img/close.webp" alt=""></button>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="#games">Games</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="header__nav__list__item logout">
+          <a class="header__nav__list__item__link" href="./singup.html">Sign up</a>
+      </li>
+      <li class="header__nav__list__item logout">
+          <a class="header__nav__list__item__link" href="./login.html">Log in</a>
+      </li>
+      <li class="header__nav__list__item login">
+          <p class="account_info"><span id="email_value"></span><br/> Coins: <span id="coins_value"></span></p>
+          <a class="header__nav__list__item__link" onclick="logout()">Log out</a>
+      </li>
+      </ul>
+    </nav>
+    <section class="">
+      <div class="container">
+        <div class="herobg">
+          <h1 class="hero-title">
+            <span>Unleash Unlimited Joy with Social Casino Adventures</span>
+          </h1>
+          <p class="hero-subtitle">
+            Dive into a captivating realm of exhilarating games, engaging challenges, and boundless entertainment—all crafted to ensure a secure, carefree experience designed for ultimate relaxation and fun.
+          </p>
+          <a href="#games" class="cta-button">Start Playing</a>
+        </div>
+        <div class="disclaimer">
+          <h4>Important Information</h4>
+          <p>
+            The games available on this platform are exclusively intended for recreational purposes and do not offer monetary value. Players cannot win real money, prizes, or tangible rewards. All tokens, credits, or points are solely for gameplay and cannot be exchanged for real-world items or services.
+          </p>
+          <p>
+            These social casino games deliver a purely virtual gaming experience, distinct from real-money gambling, and are specifically designed for users aged 18 and above.
+          </p>
+          <p>
+            Users must adhere to local laws and regulations regarding social gaming. By accessing this platform, you confirm that you meet the legal age and other jurisdictional requirements applicable in your region.
+          </p>
+          <p>
+            The platform is committed to promoting responsible play and does not encourage gambling behaviors. If you require assistance, please reach out to certified support groups or professional advisors.
+          </p>
+          <p>
+            By engaging with this site, you agree to the platform’s terms and conditions, which are subject to updates or modifications without prior notice.
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="pro-hero">
+      <div class="container">
+        <div class="info-text">
+          <h3>Our Commitment to Excellence</h3>
+          <p>
+            At playecozone, our mission is to deliver top-notch social casino games that unite players in a safe, enjoyable, and risk-free environment. We aim to redefine the casino experience by eliminating financial risks while amplifying the fun and camaraderie of social gaming.
+          </p>
+          <p class="info-highlight">
+            Tailored specifically for individuals aged 18 and older, our games emphasize relaxation, creativity, and entertainment.
+          </p>
+          <p>
+            With innovative gameplay and a focus on community, playecozone offers a diverse selection of games designed to foster connections, inspire friendly competition, and provide immersive leisure in a virtual world.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="solutions">
+      <div class="container">
+        <div class="main-content">
+          <div class="section-header">
+            <h3>About Our Platform</h3>
+            <h2>Discover the Pinnacle of <span>Social Casino Entertainment</span></h2>
+          </div>
+          <div style="padding: 14px" class="content-grid">
+            <div class="text-content">
+              <h4>Why Choose playecozone?</h4>
+              <p>
+                We revolutionize social casino entertainment by blending the excitement of casino games with the joy of social interactions. Here’s what makes us unique:
+              </p>
+              <ul>
+                <li>
+                  <strong>Secure & Risk-Free:</strong> Immerse yourself in endless entertainment without any monetary transactions.
+                </li>
+                <li>
+                  <strong>Diverse Game Selection:</strong> From slots to card games, we offer something for everyone.
+                </li>
+                <li>
+                  <strong>Social Connections:</strong> Engage with friends or meet new players while enjoying thrilling games.
+                </li>
+                <li>
+                  <strong>Stunning Themes:</strong> Experience beautifully crafted games with mesmerizing visuals and unique designs.
+                </li>
+                <li>
+                  <strong>Convenient Access:</strong> Play seamlessly on any device, wherever you are.
+                </li>
+              </ul>
+              <p>
+                Whether you’re looking to unwind or enjoy friendly challenges, our platform ensures hours of engaging fun without the risks associated with real-money gambling.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="social-casino-info">
+      <div class="container">
+        <div class="media-content">
+          <div class="image-row">
+            <a href="https://www.gambleaware.org/">
+              <img width="90px" src="./img/f1.png" alt="Supporting Responsible Gaming" />
+            </a>
+            <a href="https://www.gamstop.co.uk/">
+              <img style="background-color: aliceblue; border-radius: 30%" width="100px" src="./img/f2.png" alt="Programs for Responsible Gaming" />
+            </a>
+            <img width="90px" src="./img/f3.png" alt="Fun and Secure Casino Experience" />
+          </div>
+        </div>
+        <h2 class="section-title">
+          Social Casino: Safe, Thrilling, and Inclusive Gaming
+        </h2>
+        <p class="section-subtitle">
+          Step into a vibrant gaming universe centered on enjoyment, interaction, and worry-free entertainment.
+        </p>
+    
+        <div class="content">
+          <div class="description">
+            <h3>What Makes a Social Casino Unique?</h3>
+            <p>
+              A social casino offers an engaging way to enjoy casino-style games in a secure virtual space, free from monetary risks. Play for fun, connect with others, and relish a stress-free gaming atmosphere.
+            </p>
+            <p>
+              By eliminating financial stakes, social casinos focus on creativity, enjoyment, and fostering community-based gaming experiences that leave players entertained and connected.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="faq-reviews">
+      <div class="container container-fa">
+    
+        <h2 class="reviews-title">What Our Players Are Saying
+          <img class="obg2" src="./img/1.webp" alt="logo">
+        </h2>
+        <div class="reviews-section">
+          
+          <div class="review review1">
+            <img style="margin-bottom: 13px; border-radius: 50%" width="60px" src="./img/1.webp" alt="Player Testimonial" />
+            <p class="review-text">
+              "The games are amazing! I enjoy the excitement of casino games without any of the risks."
+            </p>
+            <p class="review-author">- Taylor, Social Gamer</p>
+            <img width="60px" src="./img/q.png" alt="quote">
+          </div>
+          <div class="review">
+            <img style="margin-bottom: 13px; border-radius: 50%" width="60px" src="./img/1.webp" alt="Player Review" />
+            <p class="review-text">
+              "The games are beautifully designed and so much fun to play. It’s the perfect way to relax and socialize."
+            </p>
+            <p class="review-author">- Jordan, Casual Player</p>
+            <img width="60px" src="./img/q.png" alt="quote">
+          </div>
+          <div class="review">
+            <img style="margin-bottom: 13px; border-radius: 50%" width="60px" src="./img/1.webp" alt="Player Feedback" />
+            <p class="review-text">
+              "I love how calming and stress-free this platform is. Truly an enjoyable experience!"
+            </p>
+            <p class="review-author">- Morgan, Gaming Enthusiast</p>
+            <img width="60px" src="./img/q.png" alt="quote">
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section id="games" class="game-collection">
+      <div class="container">
+        <h2 class="collection-title">Discover Our Exciting Games</h2>
+        <div class="game-grid">
+          <div class="game-item">
+            <img src="./img/1.webp" alt="Game 1" class="game-image" />
+            <h3 class="game-title">Casino Wheel</h3>
+            <p class="game-description">
+              Casino Wheel is a thrilling addition to the world of social gaming, bringing the excitement of spinning a vibrant, prize-filled wheel right to your screen. Whether you're seeking a quick dose of fun or a chance to test your luck, Casino Wheel offers endless entertainment in a dynamic and visually stunning environment.
+
+              Features of Casino Wheel:
+            </p>
+            <div class="video-overlay">
+              <a href="./game.html" class="play-button">Play 18+</a>
+            </div>
+          </div>
+          <div class="gamme-ite">
+            <img src="./img/img2.png" alt="Game 2" class="game-image" />
+           
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact-section">
+   
+    <video  autoplay loop muted>
+      <source src="./img/fire.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+      <div class="container-contact">
+        <form
+          id="contactForm"
+          method="post"
+          action="./send_message.php"
+          class="contact-form"
+        >
+          <h2 class="section-title">Contact Us</h2>
+       
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Your Phone</label>
+            <input
+              type="number"
+              id="phone"
+              name="email"
+              placeholder="Enter your number"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Write your message"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="submit-button">Send Message</button>
+        </form>
+      </div>
+    </div>
+    </div>
+    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let orderForm = document.getElementById("contactForm");
+        let emailInput = document.getElementById("email");
+        let savedEmail = getCookie("email");
+        if (savedEmail !== "") {
+          emailInput.value = savedEmail;
+        }
+        if (orderForm) {
+          orderForm.addEventListener("submit", function (event) {
+            document.cookie =
+              "email=" +
+              encodeURIComponent(emailInput.value) +
+              "; expires=Thu, 18 Dec 2024 12:00:00 UTC; path=/";
+          });
+        }
+      });
+      function getCookie(name) {
+        let nameEQ = name + "=";
+        let cookies = document.cookie.split(";");
+        for (let i = 0; i < cookies.length; i++) {
+          let cookie = cookies[i];
+          while (cookie.charAt(0) === " ") {
+            cookie = cookie.substring(1);
+          }
+          if (cookie.indexOf(nameEQ) === 0) {
+            return decodeURIComponent(
+              cookie.substring(nameEQ.length, cookie.length)
+            );
+          }
+        }
+        return "";
+      }
+    </script>
+    <footer class="detailed-footer">
+      <div class="container">
+        <div class="contact-info">
+          <h3>Contact Details</h3>
+          <p>
+            Email:
+            <a href="mailto:contact@playecozone.com" class="contact-email">contact@playecozone.com</a>
+          </p>
+          <p>
+            Phone:
+            <a href="tel:+44125896322" class="contact-phone">+44 1258 96322</a>
+          </p>
+          <p>
+            <p>
+              Address: 
+              <a 
+                href="https://www.google.com/maps?q=Oxford+OX1+1DP,+United+Kingdom" 
+                target="_blank" 
+                class="contact-address"
+              >
+                Oxford OX1 1DP, United Kingdom
+              </a>
+            </p>
+            
+          </p>
+        </div>
+        
+        <!-- Верхняя секция с ссылками -->
+        <div class="footer-top">
+          <div class="footer-links">
+            <a href="./terms.html" class="footer-link">Terms of Service</a>
+            <a href="./ref.html" class="footer-link">Refund Policy</a>
+            <a href="./privacy.html" class="footer-link">Privacy Policy</a>
+            <a href="./cookie.html" class="footer-link">Cookies Policy</a>
+          </div>
+        </div>
+
+        <!-- Средняя секция: Контактная информация и соцсети -->
+
+        <!-- Нижняя секция: Копирайт -->
+        <div class="footer-bottom">
+          <p>© 2024 Your playecozone . All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+
+<script src="./authv2.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

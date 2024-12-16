@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>activeplayland</title>
+    <meta
+      name="description"
+      content="activeplayland presents an exciting social gaming experience with captivating games, vibrant community interaction, and nonstop fun. Explore casino-inspired games, slot adventures, and interactive multiplayer challenges in a secure and entertaining virtual space."
+    />
+
+    <meta
+      name="keywords"
+      content="social gaming experience, online fun, free virtual games, slot adventures, multiplayer gaming, social entertainment, engaging online platform, immersive casino games, interactive community, safe gaming environment"
+    />
+    <meta name="author" content="activeplayland" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./img/1.webp" type="image/x-icon" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  </head>
+  <body onload="onloadfunc()">
+    <header class="header">
+      <div class="container header-con">
+        <div class="logo">
+          <img
+            src="./img/1.webp"
+            alt="Players"
+            class="stats-icon"
+          />activeplayland
+        </div>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#games">Games</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="header__nav__list__item logout">
+              <a class="header__nav__list__item__link" href="./signup.html">Sign up</a>
+          </li>
+          <li class="header__nav__list__item logout">
+              <a class="header__nav__list__item__link" href="./login.html">Log in</a>
+          </li>
+          <li class="header__nav__list__item login">
+              <p class="account_info"><span id="email_value"></span><br/> Coins: <span id="coins_value"></span></p>
+              <a class="header__nav__list__item__link" onclick="logout()">Log out</a>
+          </li>
+          </ul>
+        </nav>
+        <button class="menu-btn">☰</button>
+      </div>
+    </header>
+
+    <div class="mobile-menu-overlay"></div>
+    <nav class="mobile-menu">
+      <button class="close-menu"><img src="./img/close.webp" alt="" /></button>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="#games">Games</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="header__nav__list__item logout">
+          <a class="header__nav__list__item__link" href="./signup.html">Sign up</a>
+      </li>
+      <li class="header__nav__list__item logout">
+          <a class="header__nav__list__item__link" href="./login.html">Log in</a>
+      </li>
+      <li class="header__nav__list__item login">
+          <p class="account_info"><span id="email_value"></span><br/> Coins: <span id="coins_value"></span></p>
+          <a class="header__nav__list__item__link" onclick="logout()">Log out</a>
+      </li>
+      </ul>
+    </nav>
+    <section class="herobg">
+      <div class="container">
+        <div>
+          <h1 class="hero-title">
+            <span>Discover Limitless Fun with Social Casino Games</span>
+          </h1>
+          <p class="hero-subtitle">
+            Step into a dynamic world of thrilling games, exciting challenges,
+            and endless enjoyment—all crafted in a secure, stress-free
+            environment designed for ultimate relaxation and fun.
+          </p>
+          <a href="#games" class="cta-button">Start Playing</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="pro-hero">
+      <div class="container">
+        <div class="disclaimer">
+          <h4>Important Notice</h4>
+          <p>
+            The games on this platform are intended purely for entertainment and
+            do not hold any monetary value. Players cannot win real money,
+            prizes, or tangible rewards. All tokens, credits, or points are
+            exclusively for gameplay and cannot be exchanged for real-world
+            items.
+          </p>
+          <p>
+            These social casino games provide a virtual gaming experience and do
+            not simulate real-money gambling. They are designed for leisure and
+            are intended for users aged 18 and above.
+          </p>
+          <p>
+            Users must comply with local laws and regulations concerning social
+            gaming. By accessing this platform, you confirm that you meet the
+            legal age and other jurisdictional requirements.
+          </p>
+          <p>
+            The platform does not encourage gambling behaviors and advocates
+            responsible play. For assistance, please reach out to certified
+            support groups or professionals.
+          </p>
+          <p>
+            By using this site, you accept the platform's terms and conditions,
+            which may be updated or modified without prior notice.
+          </p>
+        </div>
+        <div class="info-text">
+          <h3>Our Commitment</h3>
+          <p>
+            At activeplayland, our mission is to offer high-quality social
+            casino games that bring people together in a safe, enjoyable, and
+            risk-free environment. We reinvent the casino experience by
+            eliminating monetary risks while amplifying the fun.
+          </p>
+          <p class="info-highlight">
+            Designed specifically for players aged 18 and older, our games
+            prioritize entertainment and relaxation.
+          </p>
+          <p>
+            Through innovation and community-focused gameplay, activeplayland
+            offers a wide range of games tailored to promote connection,
+            friendly competition, and leisure in an immersive virtual world.
+          </p>
+        </div>
+        <div class="hero-content">
+          <img class="imagedragon" src="./img/img3.webp" alt="" />
+          <div class="image-content">
+            <div class="slot-machine">
+              <div class="slot" id="slot1"></div>
+              <div class="slot" id="slot2"></div>
+              <div class="slot" id="slot3"></div>
+            </div>
+            <button onclick="spinSlots()">
+              <img src="./img/icons8.webp" alt="Spin the Reels" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="solutions">
+      <div class="container">
+        <div class="main-content">
+          <div class="section-header">
+            <h3>About Our Platform</h3>
+            <h2>Explore the Best in <span>Social Casino Gaming</span></h2>
+          </div>
+          <div style="padding: 14px" class="content-grid">
+            <div class="text-content">
+              <h4>Why Choose activeplayland?</h4>
+              <p>
+                We redefine social casino entertainment by merging the thrill of
+                casino games with the joy of social interaction. Here’s what
+                sets us apart:
+              </p>
+              <ul>
+                <li>
+                  <strong>Safe & Risk-Free:</strong> Enjoy endless fun without
+                  the involvement of real money.
+                </li>
+                <li>
+                  <strong>Variety of Games:</strong> From slot machines to card
+                  games, there’s something for every taste.
+                </li>
+                <li>
+                  <strong>Connect with Others:</strong> Play with friends or
+                  meet new ones while enjoying your favorite games.
+                </li>
+                <li>
+                  <strong>Unique Themes:</strong> Immerse yourself in
+                  beautifully designed games with captivating visuals.
+                </li>
+                <li>
+                  <strong>Available Anytime:</strong> Play effortlessly on any
+                  device, no matter where you are.
+                </li>
+              </ul>
+              <p>
+                Whether you’re seeking relaxation or some friendly competition,
+                our platform promises hours of engaging entertainment without
+                the risks of real-money gambling.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="social-casino-info">
+      <div class="container">
+        <div class="media-content">
+          <div class="image-row">
+            <a href="https://www.gambleaware.org/">
+              <img
+                width="90px"
+                src="./img/f1.png"
+                alt="Supporting Responsible Gaming"
+              />
+            </a>
+            <a href="https://www.gamstop.co.uk/">
+              <img
+                style="background-color: aliceblue; border-radius: 30%"
+                width="100px"
+                src="./img/f2.png"
+                alt="Programs for Responsible Gaming"
+              />
+            </a>
+            <img
+              width="90px"
+              src="./img/f3.png"
+              alt="Fun and Secure Casino Experience"
+            />
+          </div>
+        </div>
+        <h2 class="section-title">Social Casino: Safe and Enjoyable Gaming</h2>
+        <p class="section-subtitle">
+          Immerse yourself in an entertaining gaming environment focused on
+          enjoyment and social interaction, free from worry.
+        </p>
+
+        <div class="content">
+          <div class="description">
+            <h3>What is a Social Casino?</h3>
+            <p>
+              A social casino allows you to enjoy casino-style games in a
+              secure, virtual setting, without any involvement of real money.
+              Play for fun, engage with friends, and enjoy an atmosphere of
+              stress-free entertainment.
+            </p>
+            <p>
+              By removing the financial risks, social casinos focus on
+              creativity, fun, and the enjoyment of community-based gaming
+              experiences.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-reviews">
+      <div class="container container-fa">
+        <div class="reviews-section">
+          <h2 class="reviews-title">What Our Players Are Saying</h2>
+          <div style="max-width: 75%" class="review review1">
+            <img
+              style="margin-bottom: 13px; border-radius: 50%"
+              width="60px"
+              src="./img/1.webp"
+              alt="Player Testimonial"
+            />
+            <p class="review-text">
+              "The games are amazing! I enjoy the excitement of casino games
+              without any of the risks."
+            </p>
+            <p class="review-author">- Taylor, Social Gamer</p>
+            <img width="60px" src="./img/q.png" alt="quote" />
+          </div>
+          <div class="review">
+            <img
+              style="margin-bottom: 13px; border-radius: 50%"
+              width="60px"
+              src="./img/1.webp"
+              alt="Player Review"
+            />
+            <p class="review-text">
+              "The games are beautifully designed and so much fun to play. It’s
+              the perfect way to relax and socialize."
+            </p>
+            <p class="review-author">- Jordan, Casual Player</p>
+            <img width="60px" src="./img/q.png" alt="quote" />
+          </div>
+          <div style="max-width: 75%; margin-left: auto" class="review">
+            <img
+              style="margin-bottom: 13px; border-radius: 50%"
+              width="60px"
+              src="./img/1.webp"
+              alt="Player Feedback"
+            />
+            <p class="review-text">
+              "I love how calming and stress-free this platform is. Truly an
+              enjoyable experience!"
+            </p>
+            <p class="review-author">- Morgan, Gaming Enthusiast</p>
+            <img width="60px" src="./img/q.png" alt="quote" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="games" class="game-collection">
+      <div class="container">
+        <h2 class="collection-title">Discover Our Exciting Games</h2>
+        <div class="game-grid">
+          <div class="game-item">
+            <img
+              src="./img/depositphotos_11397172-stock-illustration-colorful-slot-machine-icons.webp"
+              alt="Game 1"
+              class="game-image"
+            />
+            <h3 class="game-title">Dragon Casino</h3>
+            <p class="game-description">
+              Dragon Casino is a virtual gaming platform that offers a unique
+              social casino experience inspired by the world of fantasy and
+              mythology. Immerse yourself in a captivating realm where
+              fire-breathing dragons guard their treasures, and players enjoy
+              the thrill of exhilarating games.
+            </p>
+            <div class="video-overlay">
+              <a href="./game.html" class="play-button">Play 18+</a>
+            </div>
+          </div>
+          <div class="gamme-ite">
+            <img src="./img/img2.webp" alt="Game 2" class="game-image" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact-section">
+      <video autoplay loop muted>
+        <source src="./img/fire.mp4" type="video/mp4" />
+      </video>
+      <div class="container container-contact">
+        <form
+          id="contactForm"
+          method="post"
+          action="./send_message.php"
+          class="contact-form"
+        >
+          <h2 class="section-title">Contact Us</h2>
+          <p class="section-subtitle">
+            We’d love to hear from you! Feel free to reach out using the form
+            below or contact us directly.
+          </p>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Your Phone</label>
+            <input
+              type="number"
+              id="phone"
+              name="email"
+              placeholder="Enter your number"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Write your message"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="submit-button">Send Message</button>
+        </form>
+      </div>
+    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let orderForm = document.getElementById("contactForm");
+        let emailInput = document.getElementById("email");
+        let savedEmail = getCookie("email");
+        if (savedEmail !== "") {
+          emailInput.value = savedEmail;
+        }
+        if (orderForm) {
+          orderForm.addEventListener("submit", function (event) {
+            document.cookie =
+              "email=" +
+              encodeURIComponent(emailInput.value) +
+              "; expires=Thu, 18 Dec 2024 12:00:00 UTC; path=/";
+          });
+        }
+      });
+      function getCookie(name) {
+        let nameEQ = name + "=";
+        let cookies = document.cookie.split(";");
+        for (let i = 0; i < cookies.length; i++) {
+          let cookie = cookies[i];
+          while (cookie.charAt(0) === " ") {
+            cookie = cookie.substring(1);
+          }
+          if (cookie.indexOf(nameEQ) === 0) {
+            return decodeURIComponent(
+              cookie.substring(nameEQ.length, cookie.length)
+            );
+          }
+        }
+        return "";
+      }
+    </script>
+    <footer class="detailed-footer">
+      <div class="container">
+        <div class="contact-info">
+          <h3>Contact Details</h3>
+          <p>
+            Email:
+            <a href="mailto:contact@activeplayland.com" class="contact-email"
+              >contact@activeplayland.com</a
+            >
+          </p>
+          <p>
+            Phone:
+            <a href="tel:+44125896687" class="contact-phone">+44 1258 96687</a>
+          </p>
+          <p>
+            Address:
+            <a
+              href="https://www.google.com/maps?q=Isleworth+TW7+5QD,+United+Kingdom"
+              target="_blank"
+              class="contact-address"
+            >
+              Isleworth TW7 5QD, United Kingdom
+            </a>
+          </p>
+        </div>
+
+        <!-- Верхняя секция с ссылками -->
+        <div class="footer-top">
+          <div class="footer-links">
+            <a href="./terms.html" class="footer-link">Terms of Service</a>
+            <a href="./ref.html" class="footer-link">Refund Policy</a>
+            <a href="./privacy.html" class="footer-link">Privacy Policy</a>
+            <a href="./cookie.html" class="footer-link">Cookies Policy</a>
+          </div>
+        </div>
+
+        <!-- Средняя секция: Контактная информация и соцсети -->
+
+        <!-- Нижняя секция: Копирайт -->
+        <div class="footer-bottom">
+          <p>© 2024 Your activeplayland . All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+
+
+    <script src="./authv2.js"></script>
+    <script src="./script.js"></script>
+ 
+
+
+  </body>
+</html>

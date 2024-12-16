@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cards>
+	<card id='1' lv='3'>50</card>
+	<card id='1' lv='4'>100</card>
+	<card id='1' lv='5'>200</card>
+	<card id='2' lv='3'>13</card>
+	<card id='2' lv='4'>25</card>
+	<card id='2' lv='5'>50</card>
+	<card id='3' lv='3'>10</card>
+	<card id='3' lv='4'>20</card>
+	<card id='3' lv='5'>40</card>
+	<card id='4' lv='3'>7</card>
+	<card id='4' lv='4'>15</card>
+	<card id='4' lv='5'>30</card>
+	<card id='5' lv='3'>5</card>
+	<card id='5' lv='4'>10</card>
+	<card id='5' lv='5'>20</card>
+	<card id='6' lv='3'>4</card>
+	<card id='6' lv='4'>8</card>
+	<card id='6' lv='5'>15</card>
+	<card id='7' lv='3'>3</card>
+	<card id='7' lv='4'>6</card>
+	<card id='7' lv='5'>12</card>
+	<card id='8' lv='3'>2</card>
+	<card id='8' lv='4'>5</card>
+	<card id='8' lv='5'>10</card>
+	<card id='0' lv='5'>1200</card>
+</cards>

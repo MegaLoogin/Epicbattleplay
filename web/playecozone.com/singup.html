@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>playecozone</title>
+    <meta
+      name="description"
+      content="playecozone presents an exciting social gaming experience with captivating games, vibrant community interaction, and nonstop fun. Explore casino-inspired games, slot adventures, and interactive multiplayer challenges in a secure and entertaining virtual space."
+    />
+
+    <meta
+      name="keywords"
+      content="social gaming experience, online fun, free virtual games, slot adventures, multiplayer gaming, social entertainment, engaging online platform, immersive casino games, interactive community, safe gaming environment"
+    />
+    <meta name="author" content="playecozone" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/1.webp" type="image/x-icon" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  </head>
+  <body onload="onloadfunc()">
+    <header class="header">
+      <div class="container header-con">
+        <div class="logo">
+          <img
+            src="./img/1.webp"
+            alt="Players"
+            class="stats-icon"
+          />playecozone
+        </div>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#games">Games</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="header__nav__list__item logout">
+              <a class="header__nav__list__item__link" href="./singup.html">Sign up</a>
+          </li>
+          <li class="header__nav__list__item logout">
+              <a class="header__nav__list__item__link" href="./login.html">Log in</a>
+          </li>
+          <li class="header__nav__list__item login">
+              <a class="header__nav__list__item__link" onclick="logout()">Log out</a>
+          </li>
+          </ul>
+        </nav>
+        <button class="menu-btn">☰</button>
+      </div>
+    </header>
+    <div class="mobile-menu-overlay"></div>
+    <nav class="mobile-menu">
+      <button class="close-menu"><img src="./img/close.webp" alt=""></button>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="#games">Games</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="header__nav__list__item logout">
+          <a class="header__nav__list__item__link" href="./signup.html">Sign up</a>
+      </li>
+      <li class="header__nav__list__item logout">
+          <a class="header__nav__list__item__link" href="./login.html">Log in</a>
+      </li>
+      <li class="header__nav__list__item login">
+          <p class="account_info"><span id="email_value"></span><br/> Coins: <span id="coins_value"></span></p>
+          <a class="header__nav__list__item__link" onclick="logout()">Log out</a>
+      </li>
+      </ul>
+    </nav>
+    <section class="">
+      <div class="container">
+        <div class="herobg">
+          <h1 class="hero-title">
+            <span>Unleash Unlimited Joy with Social Casino Adventures</span>
+          </h1>
+          <p class="hero-subtitle">
+            Dive into a captivating realm of exhilarating games, engaging challenges, and boundless entertainment—all crafted to ensure a secure, carefree experience designed for ultimate relaxation and fun.
+          </p>
+          <a href="#games" class="cta-button">Start Playing</a>
+        </div>
+        <div class="disclaimer">
+          <h4>Important Information</h4>
+          <p>
+            The games available on this platform are exclusively intended for recreational purposes and do not offer monetary value. Players cannot win real money, prizes, or tangible rewards. All tokens, credits, or points are solely for gameplay and cannot be exchanged for real-world items or services.
+          </p>
+          <p>
+            These social casino games deliver a purely virtual gaming experience, distinct from real-money gambling, and are specifically designed for users aged 18 and above.
+          </p>
+          <p>
+            Users must adhere to local laws and regulations regarding social gaming. By accessing this platform, you confirm that you meet the legal age and other jurisdictional requirements applicable in your region.
+          </p>
+          <p>
+            The platform is committed to promoting responsible play and does not encourage gambling behaviors. If you require assistance, please reach out to certified support groups or professional advisors.
+          </p>
+          <p>
+            By engaging with this site, you agree to the platform’s terms and conditions, which are subject to updates or modifications without prior notice.
+          </p>
+        </div>
+      </div>
+    </section> 
+
+
+    <section id="contact" class="contact-section">
+    <video  autoplay loop muted>
+      <source src="./img/fire.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+      <div class="container-contact">
+        <div class="contact-form">
+            <h1>SING UP</h1>
+            <br/>
+            <form id="regForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="Enter your email" required>
+                    <p id="result"></p>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <p id="result2"></p>
+                </div>
+                <button type="button" onclick="if(validEmail && validPass) registration()">Sign up</button>
+            </form>
+            
+          </div>
+          <script>
+          let validEmail, validPass = false;
+          const validateEmail = (email) => {
+            return String(email)
+              .toLowerCase()
+              .match(
+                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+              );
+          };
+        
+          const validate = () => {
+            const $result = $('#result');
+            const email = $('#email').val();
+            $result.text('');
+            validEmail = validateEmail(email)
+          
+            if(validEmail){
+              $result.text(email + ' é válido.');
+              $result.css('color', 'green');
+            } else{
+              $result.text(email + ' é inválido.');
+              $result.css('color', 'red');
+            }
+            return false;
+          }
+
+          const validatePas = () => {
+            const $result = $('#result2');
+            const pass = $('#password').val();
+            $result.text('');
+
+            validPass = pass.length >= 8
+          
+            if(validPass){
+              $result.text('A palavra-passe é boa.');
+              $result.css('color', 'green');
+            } else{
+              $result.text('Palavra-passe curta!');
+              $result.css('color', 'red');
+            }
+            return false;
+          }
+        
+          $('#email').on('input', validate);
+          $('#password').on('input', validatePas);
+          </script>
+      </div>
+    </div>
+    </div>
+    </section>
+
+    <footer class="detailed-footer">
+      <div class="container">
+        <div class="contact-info">
+          <h3>Contact Details</h3>
+          <p>
+            Email:
+            <a href="mailto:contact@playecozone.com" class="contact-email">contact@playecozone.com</a>
+          </p>
+          <p>
+            Phone:
+            <a href="tel:+44125896322" class="contact-phone">+44 1258 96322</a>
+          </p>
+          <p>
+            <p>
+              Address: 
+              <a 
+                href="https://www.google.com/maps?q=Oxford+OX1+1DP,+United+Kingdom" 
+                target="_blank" 
+                class="contact-address"
+              >
+                Oxford OX1 1DP, United Kingdom
+              </a>
+            </p>
+            
+          </p>
+        </div>
+        
+        <!-- Верхняя секция с ссылками -->
+        <div class="footer-top">
+          <div class="footer-links">
+            <a href="./terms.html" class="footer-link">Terms of Service</a>
+            <a href="./ref.html" class="footer-link">Refund Policy</a>
+            <a href="./privacy.html" class="footer-link">Privacy Policy</a>
+            <a href="./cookie.html" class="footer-link">Cookies Policy</a>
+          </div>
+        </div>
+
+        <!-- Средняя секция: Контактная информация и соцсети -->
+
+        <!-- Нижняя секция: Копирайт -->
+        <div class="footer-bottom">
+          <p>© 2024 Your playecozone . All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+
+<script src="./authv2.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

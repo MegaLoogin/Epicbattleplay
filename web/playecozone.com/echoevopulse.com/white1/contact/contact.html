@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>echoevopulse</title>
+    <meta name="description" content="Professional clearance and moving services for furniture, appliances, junk, and office equipment. Reliable, eco-friendly, and tailored to meet your needs.">
+    <meta name="keywords" content="clearance services, moving services, furniture removal, appliance disposal, junk clearance, office clearance, eco-friendly moving, waste disposal, local movers, heavy lifting">
+
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header id="header" class="header">
+      <div class="header__container container">
+        <h1 class="header__logo">echoevopulse</h1>
+        <nav class="header__nav-desktop">
+            <a href="../index.html" class="header__link">Home</a>
+            <a href="../about/about.html" class="header__link">About</a>
+            <a href="../index.html#srv" class="header__link">Services</a>
+            <a href="../contact/contact.html" class="header__link">Contact</a>
+        </nav>
+        <button class="header__toggle" id="menuToggle" aria-label="Toggle Menu">
+          <span class="header__toggle-bar"></span>
+          <span class="header__toggle-bar"></span>
+          <span class="header__toggle-bar"></span>
+        </button>
+      </div>
+      <nav class="header__nav-mobile" id="navMenu">
+        <a href="../index.html" class="header__link">Home</a>
+        <a href="../about/about.html" class="header__link">About</a>
+        <a href="../index.html#srv" class="header__link">Services</a>
+        <a href="../contact/contact.html" class="header__link">Contact</a>
+      </nav>
+    </header>
+    <section class="container-1">
+      <div class="herobg container">
+        <h1 class="hero-title">WELCOME TO ECO-CLEARANCE</h1>
+        <p class="hero-subtitle">
+          We help you responsibly dispose of old furniture, appliances, and
+          junk.
+        </p>
+        <div class="cta-buttons">
+          <a href="../index.html#srv" class="cta-link">OUR SERVICES</a>
+          <a href="./contact.html" class="cta-link">CONTACT US</a>
+        </div>
+      </div>
+      <div class="">
+        <img 
+          class="circle"
+          src="../img/12.webp"
+          alt="Eco-friendly removal"
+          class="circle-image"
+        />
+      </div>
+    </section>
+
+    <section class="">
+      <div class="container contact-section">
+        <h2>Get in Touch.</h2>
+        <div class="contact-details">
+          <img width="100%" src="../img/srv3.webp" alt="Contact Image" />
+        </div>
+        <div class="contact-form">
+          <h3>Write Me Something</h3>
+
+          <form id="contactForm" method="post" action="../send_message.php">
+            <input id="name" type="text" placeholder="Name" />
+            <input id="email" type="email" placeholder="E-Mail" />
+            <input id="phone" type="number" placeholder="Phone" />
+
+            <textarea placeholder="Message"></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+    <section class="gallery-section">
+        <div class="container">
+          <h2>Our Portfolio</h2>
+          <div class="gallery">
+            <img src="../img/srv1.webp" alt="Sample 1" />
+            <img src="../img/srv2.webp"  alt="Sample 2" />
+            <img src="../img/srv3.webp"  alt="Sample 3" />
+            <img src="../img/srv4.webp"  alt="Sample 4" />
+            <img src="../img/srv5.webp"  alt="Sample 5" />
+            <img src="../img/srv3.webp"  alt="Sample 6" />
+          </div>
+        </div>
+        <div class="stats">
+          <div>
+            <h3>3K+</h3>
+            <p>Projects Done</p>
+          </div>
+          <div>
+            <h3>98+</h3>
+            <p>Happy Clients</p>
+          </div>
+          <div>
+            <h3>13</h3>
+            <p>Awards Won</p>
+          </div>
+        </div>
+        <div class="testwrap container">
+     
+          <section class="testimonial">
+            <h3>Client Reviews</h3>
+            <div class="testimonial-slider">
+              <div class="slides">
+                <div class="slide">
+                  <p>
+                    "Monotonically orchestrate professionals. Supply chains in
+                    metrics. Collaboratively enhance architectures. A+ Service!"
+                  </p>
+                  <h4>Alex John</h4>
+                  <p>UI Designer</p>
+                </div>
+                <div class="slide">
+                  <p>
+                    "Globally leverage diverse architectures to maximize supply
+                    chain synergy. Highly recommended!"
+                  </p>
+                  <h4>Jane Doe</h4>
+                  <p>Product Manager</p>
+                </div>
+                <div class="slide">
+                  <p>
+                    "Proactively synergize innovative strategies. Seamlessly
+                    optimize operational efficiencies. Fantastic team!"
+                  </p>
+                  <h4>John Smith</h4>
+                  <p>Software Engineer</p>
+                </div>
+              </div>
+            </div>
+            <div class="navigation">
+              <button onclick="prevSlide()">Prev</button>
+              <button onclick="nextSlide()">Next</button>
+            </div>
+          </section>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__container">
+            <!-- Address Section -->
+            <div class="footer__section">
+              <h3 class="footer__title">Our Address</h3>
+              <p class="footer__text">22B Baker Street, London, United Kingdom</p>
+              <a
+                href="https://www.google.com/maps?q=221B+Baker+Street+London"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer__link"
+              >
+                View on Google Maps
+              </a>
+            </div>
+  
+            <!-- Contact Section -->
+            <div class="footer__section">
+              <h3 class="footer__title">Contact Us</h3>
+              <p class="footer__text">
+                Address: Vinegar Yard, St Thomas St, London SE1 3QU, United
+                Kingdom Navigate to this location on Google Maps:
+                <a
+                  href="https://www.google.com/maps/place/Vinegar+Yard/@51.500781,-0.094561,17z"
+                  target="_blank"
+                  >Vinegar Yard on Google Maps</a
+                >
+              </p>
+              <p class="footer__text">
+                Phone:
+                <a href="tel:+442034567320" class="footer__link"
+                  >+44 203 456 7320</a
+                >
+              </p>
+              <p class="footer__text">
+                Email:
+                <a href="mailto:contact@echoevopulse.com" class="footer__link"
+                  >contact@echoevopulse.com</a
+                >
+              </p>
+            </div>
+  
+            <!-- Quick Links Section -->
+            <div class="footer__section">
+              <h3 class="footer__title">Quick Links</h3>
+              <a href="../privacy.html" class="footer__link">Privacy Policy</a>
+              <a href="../terms.html" class="footer__link">Terms and Conditions</a>
+             
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <p class="footer__copyright">
+              © 2024 echoevopulse. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    <!-- Cookie Modal -->
+<div id="cookie-modal" class="cookie-modal">
+  <div class="cookie-modal-content">
+    <h2>Cookies Consent</h2>
+    <p>
+      We use cookies to improve your experience on our site, analyze traffic, and serve personalized content. By clicking "Accept All", you consent to our use of cookies.
+    </p>
+    <div class="cookie-buttons">
+      <button id="accept-cookies" class="cookie-btn accept">Accept All</button>
+      <button id="decline-cookies" class="cookie-btn decline">Decline</button>
+    </div>
+  </div>
+</div>
+
+<!-- CSS -->
+<style>
+  .cookie-modal {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+  }
+  .cookie-modal-content {
+    text-align: center;
+  }
+  .cookie-modal h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .cookie-modal p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  .cookie-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  .cookie-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .cookie-btn.accept {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  .cookie-btn.decline {
+    background-color: #f44336;
+    color: #fff;
+  }
+</style>
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+  let orderForm = document.getElementById("contactForm");
+  let emailInput = document.getElementById("email");
+
+  let savedEmail = getCookie("email");
+
+  if (savedEmail !== "") {
+    emailInput.value = savedEmail;
+  }
+
+  if (orderForm) {
+    orderForm.addEventListener("submit", function (event) {
+      document.cookie =
+        "email=" +
+        encodeURIComponent(emailInput.value) +
+        "; expires=Thu, 18 Dec 2024 12:00:00 UTC; path=/";
+    });
+  }
+});
+
+function getCookie(name) {
+  let nameEQ = name + "=";
+  let cookies = document.cookie.split(";");
+  for (let i = 0; i < cookies.length; i++) {
+    let cookie = cookies[i];
+    while (cookie.charAt(0) === " ") {
+      cookie = cookie.substring(1);
+    }
+    if (cookie.indexOf(nameEQ) === 0) {
+      return decodeURIComponent(
+        cookie.substring(nameEQ.length, cookie.length)
+      );
+    }
+  }
+  return "";
+}
+  </script>
+<!-- JavaScript -->
+<script>
+  // Check if cookies have already been accepted
+  const isCookiesAccepted = localStorage.getItem('cookiesAccepted');
+
+  if (!isCookiesAccepted) {
+    document.getElementById('cookie-modal').style.display = 'block';
+  }
+
+  // Accept cookies
+  document.getElementById('accept-cookies').addEventListener('click', () => {
+    localStorage.setItem('cookiesAccepted', 'true');
+    document.getElementById('cookie-modal').style.display = 'none';
+  });
+
+  // Decline cookies
+  document.getElementById('decline-cookies').addEventListener('click', () => {
+    localStorage.setItem('cookiesAccepted', 'false');
+    document.getElementById('cookie-modal').style.display = 'none';
+  });
+</script>
+
+
+    <script>
+      const slides = document.querySelector(".slides");
+      let currentIndex = 0;
+
+      function showSlide(index) {
+        const slideWidth = document.querySelector(".slide").offsetWidth;
+        slides.style.transform = `translateX(-${index * slideWidth}px)`;
+      }
+
+      function prevSlide() {
+        currentIndex =
+          currentIndex === 0 ? slides.children.length - 1 : currentIndex - 1;
+        showSlide(currentIndex);
+      }
+
+      function nextSlide() {
+        currentIndex =
+          currentIndex === slides.children.length - 1 ? 0 : currentIndex + 1;
+        showSlide(currentIndex);
+      }
+    </script>
+    <!-- Section 2 -->
+    <script src="../index.js"></script>
+  </body>
+</html>
