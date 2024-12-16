@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="en-GB">
+    <meta name="geo.region" content="GB">
+    <meta name="geo.placename" content="United Kingdom">
+    <meta name="language" content="English">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Greyhound Racing - HTML5 Casino Game. Bet on exciting greyhound races and enjoy premium 3D graphics at Virtual Joy Hub.">
+    <meta name="author" content="SwiftLunar">
+    <meta property="og:title" content="Greyhound Racing - HTML5 Casino Game">
+    <meta property="og:description"
+        content="Bet on exciting greyhound races and enjoy premium 3D graphics with our HTML5 Casino Game. Visit virtualjoyhub.com for an unforgettable gaming experience.">
+    <meta property="og:image" content="https://virtualjoyhub.com/images/preview-image.jpg">
+    <meta property="og:url" content="https://virtualjoyhub.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:title" content="Greyhound Racing - HTML5 Casino Game">
+    <meta name="twitter:description"
+        content="Bet on exciting greyhound races and enjoy premium 3D graphics with our HTML5 Casino Game.">
+    <meta name="twitter:image" content="https://virtualjoyhub.com/images/preview-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Greyhound Racing - Casino Game | Virtual Joy Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/signup.css">
+    <link rel="icon" href="/images/icon-logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baumans&display=swap" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body onload="onloadfunc()">
+    <header class="header">
+        <div class="header__logo">
+            <img src="/images/icon-logo.png" alt="Logo" class="logo">
+        </div>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li><a href="./index.html" class="nav__link">Home</a></li>
+                <li><a href="./signup.html" class="nav__link">Sign Up</a></li>
+                <li><a href="./login.html" class="nav__link">Login</a></li>
+                <li><a href="./about.html" class="nav__link">About</a></li>
+                <li><a href="./contact.html" class="nav__link">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle" id="menuToggle">
+            <span class="menu-toggle__bar"></span>
+            <span class="menu-toggle__bar"></span>
+            <span class="menu-toggle__bar"></span>
+        </button>
+    </header>
+
+    <aside class="drawer-menu" id="drawerMenu">
+        <button class="drawer-menu__close" id="closeMenu">×</button>
+        <ul class="drawer-menu__list">
+            <li><a href="./index.html" class="nav__link">Home</a></li>
+            <li><a href="./signup.html" class="nav__link">Sign Up</a></li>
+            <li><a href="./login.html" class="nav__link">Login</a></li>
+            <li><a href="./about.html" class="nav__link">About</a></li>
+            <li><a href="./contact.html" class="nav__link">Contact</a></li>
+        </ul>
+    </aside>
+    
+    <iframe src="./game/index.html" width="100%" height="100%"></iframe>
+
+    <footer>
+        <div class="container">
+            <div class="description">
+                <h3>Declaração de exoneração de responsabilidade</h3>
+                <p>Os jogos sociais oferecem uma mistura divertida de jogos tradicionais de casino com os elementos
+                    interactivos das redes sociais. Estes jogos têm um objetivo puramente lúdico e não envolvem apostas
+                    financeiras reais. Embora reproduzam a emoção dos rolos giratórios ou dos jogos de cartas, são
+                    estritamente divertidos e concebidos para os jogadores que preferem evitar os riscos associados aos
+                    jogos de azar com dinheiro real. Estas plataformas promovem um ambiente seguro e inclusivo para os
+                    utilizadores se envolverem em jogos cativantes e comunidades animadas. Os jogadores podem partilhar
+                    dicas, celebrar vitórias e desfrutar de uma competição amigável sem quaisquer implicações
+                    financeiras.</p>
+            </div>
+            <div class="footer-inner">
+
+                <p>&copy; 2024 SwiftLunar. <br> All rights reserved.</p>
+                <div class="box-img">
+                    <a href="https://www.gambleaware.org/"><img src="/images/f1.png" alt="Gamble Aware"></a>
+                    <a href="https://www.safergamblingstandard.org.uk/"><img src="/images/f2.png"
+                            alt="Safer Gambling Standard"></a>
+                    <img src="/images/icon-18+.png" alt="18+ Warning">
+                </div>
+                <div class="box-polic">
+                    <p class="box-polic-inner"><a href="./privacy-policy.html">Privacy <br> Policy</a> | <a
+                            href="./terms-of-service.html">Terms
+                            of<br>
+                            Service</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./src/authv2.js"></script>
+    <script>
+        (async () => {
+            try {
+                const res = await Api.subCoins(10); // Предполагаем, что Api.subCoins возвращает Promise
+                if (res?.status === 'success' || res == null) {
+                    onloadfunc(); // Если запрос успешный, вызываем функцию onloadfunc
+                } else {
+                    alert("Não há moedas suficientes!"); // Если недостаточно монет
+                    window.location.href = "/"; // Возвращаемся на главную страницу
+                }
+            } catch (error) {
+                console.error("Произошла ошибка:", error); // Обрабатываем возможные ошибки
+                window.location.href = "/"; // В случае ошибки также возвращаемся на главную
+            }
+        })();
+    </script>
+</body>
+
+</html>
