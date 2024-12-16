@@ -198,6 +198,7 @@
             color: black;
         }
     </style>
+    <script src="/src/authv2.js"></script>
     <script>
         window.onload = function () {
             const cookieModal = document.getElementById('cookieModal');
@@ -213,11 +214,12 @@
                     cookieModal.style.display = 'none';
                 };
             }
+
+            onloadfunc();
         };
     </script>
     <script src="/js/swiper.js"></script>
     <script src="/js/main.js"></script>
-    <script src="/src/authv2.js"></script>
 </body>
 
 </html>
