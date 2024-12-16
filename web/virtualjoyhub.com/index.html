@@ -28,7 +28,7 @@
     <link rel="icon" href="/images/icon-logo.png" type="image/x-icon">
 </head>
 
-<body>
+<body onload="onloadfunc()">
     <header class="header">
         <div class="header__logo">
             <img src="/images/icon-logo.png" alt="Logo" class="logo">
@@ -36,10 +36,14 @@
         <nav class="nav">
             <ul class="nav__list">
                 <li><a href="./index.html" class="nav__link">Home</a></li>
-                <li><a href="./signup.html" class="nav__link">Sign Up</a></li>
-                <li><a href="./login.html" class="nav__link">Login</a></li>
+                <li><a href="./signup.html" class="nav__link logout">Sign Up</a></li>
+                <li><a href="./login.html" class="nav__link logout">Login</a></li>
                 <li><a href="./about.html" class="nav__link">About</a></li>
                 <li><a href="./contact.html" class="nav__link">Contact</a></li>
+                <li class="login">
+                    <p class="account_info"><span id="email_value"></span><br/> Coins: <span id="coins_value"></span></p>
+                </li>
+                <li><a class="nav__link" onclick="logout()">Logout</a></li>
             </ul>
         </nav>
         <button class="menu-toggle" id="menuToggle">
@@ -53,10 +57,14 @@
         <button class="drawer-menu__close" id="closeMenu">×</button>
         <ul class="drawer-menu__list">
             <li><a href="./index.html" class="nav__link">Home</a></li>
-            <li><a href="./signup.html" class="nav__link">Sign Up</a></li>
-            <li><a href="./login.html" class="nav__link">Login</a></li>
+            <li><a href="./signup.html" class="nav__link logout">Sign Up</a></li>
+            <li><a href="./login.html" class="nav__link logout">Login</a></li>
             <li><a href="./about.html" class="nav__link">About</a></li>
             <li><a href="./contact.html" class="nav__link">Contact</a></li>
+            <li class="login">
+                <p class="account_info"><span id="email_value"></span><br/> Coins: <span id="coins_value"></span></p>
+            </li>
+            <li><a class="nav__link" onclick="logout()">Logout</a></li>
         </ul>
     </aside>
 
@@ -209,6 +217,7 @@
     </script>
     <script src="/js/swiper.js"></script>
     <script src="/js/main.js"></script>
+    <script src="src/authv2.js"></script>
 </body>
 
 </html>
