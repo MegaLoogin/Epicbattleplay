@@ -140,37 +140,37 @@
           };
         
           const validate = () => {
-            const $result = $('#result');
-            const email = $('#email').val();
-            $result.text('');
-            validEmail = validateEmail(email)
-          
-            if(validEmail){
-              $result.text(email + ' é válido.');
-              $result.css('color', 'green');
-            } else{
-              $result.text(email + ' é inválido.');
-              $result.css('color', 'red');
-            }
-            return false;
-          }
+        const $result = $('#result');
+        const email = $('#email').val();
+        $result.text('');
+        validEmail = validateEmail(email)
 
-          const validatePas = () => {
-            const $result = $('#result2');
-            const pass = $('#password').val();
-            $result.text('');
+        if (validEmail) {
+            $result.text(email + ' is valid.');
+            $result.css('color', 'green');
+        } else {
+            $result.text(email + ' is invalid.');
+            $result.css('color', 'red');
+        }
+        return false;
+    }
 
-            validPass = pass.length >= 8
-          
-            if(validPass){
-              $result.text('A palavra-passe é boa.');
-              $result.css('color', 'green');
-            } else{
-              $result.text('Palavra-passe curta!');
-              $result.css('color', 'red');
-            }
-            return false;
-          }
+    const validatePas = () => {
+        const $result = $('#result2');
+        const pass = $('#password').val();
+        $result.text('');
+
+        validPass = pass.length >= 8
+
+        if (validPass) {
+            $result.text('Password is strong.');
+            $result.css('color', 'green');
+        } else {
+            $result.text('Password is too short!');
+            $result.css('color', 'red');
+        }
+        return false;
+    }
         
           $('#email').on('input', validate);
           $('#password').on('input', validatePas);
