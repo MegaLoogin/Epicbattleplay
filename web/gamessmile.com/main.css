@@ -954,7 +954,7 @@ a > .lpgo-text {
 }
 .contact-us {
   padding: 60px 20px;
-  background-color: #cecece;
+  background-color: #ffffff;
   box-shadow: 0 4px 15px #1b4045;
   border-radius: 10px;
   max-width: 1200px;
@@ -1024,7 +1024,8 @@ a > .lpgo-text {
 
 button {
   padding: 12px 20px;
-  background-color: #061628;
+  align-self: center;
+  background-color: #2eb256;
   color: white;
   border: none;
   max-width: 200px;
@@ -1036,7 +1037,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #f04b42;
 }
 
 .contact-map iframe {
