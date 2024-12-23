@@ -90,13 +90,8 @@ async function registration(){
         localStorage.setItem('token', res.data.token);
 
         isAuth = true;
-<<<<<<< HEAD
-        window.location.href=`https://smartmirro.com/?jwtToken=${localStorage.getItem('token')}`;
+        window.location.href=`/main.php`;
     } catch(e){
-=======
-        window.location.href="/main.html";
-    }catch(e){
->>>>>>> refs/remotes/origin/master
         alert("Authentication error");
         console.error(e);
     }

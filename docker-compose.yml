@@ -23,6 +23,16 @@ services:
             - ./nginx/sites-avaliable:/etc/nginx/sites-avaliable
             - ./nginx/ssl:/etc/nginx/ssl
             - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+        depends_on:
+            - php
+
+    php:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: php
+        volumes:
+        - ./web:/var/www/html
 
     mongodb:
         image: mongo:7.0
