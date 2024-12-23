@@ -1,3 +1,4 @@
+<?php require 'while.php'; ?>
 <!DOCTYPE html>
 <html lang="pt">
   <head>
