@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="gamessmile, social casino games, free social casino games, social gaming, online casino games, no real-money gambling, free poker, virtual casino, online gaming community, play for fun, slot machines, card games, multiplayer casino games, free online games, social gambling, casino entertainment, connect with friends, leaderboards, safe gaming, interactive gaming, free slots, UK players, British casino"
+    />
+    <meta
+      name="description"
+      content="Explore a diverse range of free social casino games at gamessmile! Immerse yourself in slots, blackjack, poker, and more, all without the need for real-money bets. Enjoy unlimited fun, connect with friends, and climb the leaderboards in a vibrant and secure gaming community. Join Gamessmile now for the ultimate social casino experience!"
+    />
+    <title>Gamessmile</title>
+    <link rel="icon" type="image/x-icon" href="./src/images/logo.png" />
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baumans&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFTLQ759J8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FFTLQ759J8');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WRHT847X');</script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body onload="onloadfunc()">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WRHT847X"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header id="header" class="header">
+      <div class="container header-wraper">
+        <a href="./index.html" class="logo-link"
+          ><img
+            style="margin-right: 10px"
+            width="30px"
+            class="logo-img"
+            src="./src/images/logo.png"
+            alt=""
+          />
+          Gamessmile</a
+        >
+        <nav class="header__nav">
+          <ul class="header__nav__list">
+            <li class="header__nav__list__item">
+              <a class="header__nav__list__item__link" href="#about">Início</a>
+            </li>
+            <li class="header__nav__list__item">
+              <a class="header__nav__list__item__link" href="./contact.html"
+                >Contacto</a
+              >
+            </li>
+            <li class="header__nav__list__item">
+              <a class="header__nav__list__item__link" href="#games">Jogos</a>
+            </li>
+            <li class="header__nav__list__item logout">
+              <a class="header__nav__list__item__link" href="./signup.html">Inscrever-se</a>
+            </li>
+            <li class="header__nav__list__item logout">
+              <a class="header__nav__list__item__link" href="./login.html">Iniciar sessão</a>
+            </li>
+            <li class="header__nav__list__item login">
+              <p class="account_info"><span id="email_value"></span><br/> Moedas: <span id="coins_value"></span></p>
+              <a class="header__nav__list__item__link" onclick="logout()">Terminar sessão</a>
+            </li>
+            <li class="header__nav__list__item">
+              <p class="last-item" href="">18+</p>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <header class="header-drop">
+      <div class="container">
+        <div class="header-drop__wraper">
+          <a href="./index.html" style="margin-right: 10px" class="logo-link"
+            >Gamessmile</a
+          >
+
+          <img
+            class="header-drop__icon"
+            width="30px"
+            height="30px"
+            src="./src/images/close.svg"
+            alt="close"
+          />
+          <img
+            width="30px"
+            height="30px"
+            class="header-drop__icon-open"
+            src="./src/images/burger.svg"
+            alt="burger"
+          />
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="header-drop__nav-wraper">
+        <nav class="header-drop__nav">
+          <ul class="header-drop__nav__list">
+            <li class="header__nav__list__item">
+              <a class="header__nav__list__item__link" href="./index.html"
+                >Início</a
+              >
+            </li>
+            <li class="header__nav__list__item">
+              <a class="header__nav__list__item__link" href="./privacy.html"
+                >Política de privacidade</a
+              >
+            </li>
+            <li class="header__nav__list__item">
+              <a class="header__nav__list__item__link" href="#games">Jogos</a>
+            </li>
+            <li class="header__nav__list__item">
+              <a class="header__nav__list__item__link" href="">18+</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <main class="main-content">
+      <section id="hero" class="hero">
+        <div class="container">
+          <div class="page-title-bg">
+            <h1 class="page-title">
+              Mergulhe num excitante mundo de diversão com Gamessmile
+            </h1>
+          </div>
+          
+          
+
+          <div class="img-herocnt">
+            <img class="imgg1" src="./src/images/soccer1.png" alt="girl" />
+            <div class="buttons">
+              <a class="hero-btns" href="./signup.html" style="box-shadow: 0 4px 30px 20px #ffffff; background-color: rgba(255, 0, 0, 0.5)">Inscrever-se</a>
+              <a class="hero-btns" href="#ab">Sobre</a>
+            </div>
+            <img src="./src/images/soccer2.png" alt="girl" />
+          </div>
+        </div>
+      </section>
+
+      <div class="frame-wraper">
+          <div class="modal">
+          <!-- <div class="modal-header"> -->
+            <button class="gallery-close" style="position: absolute;">
+              <img
+                width="30px"
+                height="30px"
+                src="./src/images/close.svg"
+                alt=""
+              />
+            </button>
+  
+          <!-- </div> -->
+          <!-- <div class="holder2"> -->
+            <iframe
+              class="game-window"
+              id="gameFrame"
+              src=""
+              allowfullscreen
+            ></iframe>
+            <script>
+              function hide(){
+                document.getElementById("pngLogoWrapper").style.display = "none";
+              }
+
+              function show(){
+                document.getElementById("pngLogoWrapper").style.display = "block";
+              }
+            </script>
+            <div class="nologo" id="pngLogoWrapper" onclick="hide();"></div>
+            <div class="nologo2"></div>
+          <!-- </div> -->
+        </div>
+        <style>
+          .nologo2{
+              position: absolute;
+              bottom: 0%;
+              /* left: 0px; */
+              right: 0px;
+              /* margin: 100px auto; */
+              /* transform-origin: right top; */
+              background-size: 100% 100%;
+              width: 20vw;
+              height: 3vh;
+  
+              -webkit-transition: all 0.3s ease-out;
+              -moz-transition: all 0.3s ease-out;
+              -o-transition: all 0.3s ease-out;
+              -ms-transition: all 0.3s ease-out;
+              transition: all 0.3s ease-out;
+              z-index: 9999;
+              background-color: black;
+          }
+
+          .modal{
+              width: 100%;
+              min-height: 95%;
+              position: relative;
+          }
+  
+          .game-window{
+              width: 100%;
+              height: 100%;
+          }
+
+          /** DESKTOP LANDSCAPE **/
+          @media only screen and (max-width: 1212px) {
+              .nologo2 {
+                  /* width: calc(6.5vh * 3); */
+                  /* height: 6.5vh; */
+                  top: max(calc(100vw / 1.4), calc(100vw / 2));
+              }
+          }
+  
+          /** DESKTOP PORTRAIT **/
+          @media only screen and (min-width: 768px) and (orientation: portrait) {
+              #pngLogoWrapper {
+                  width: 30vw;
+                  height: calc(30vw * 0.4);
+              }
+          }
+  
+          /** DESKTOP LANDSCAPE **/
+          @media only screen and (min-width: 768px) and (orientation: landscape) {
+              #pngLogoWrapper {
+                  width: calc(6.5vh * 3);
+                  height: 6.5vh;
+                  bottom: 1%;
+              }
+          }
+  
+          .nologo{
+              position: absolute;
+              bottom: 2%;
+              left: 0px;
+              right: 0px;
+              margin: 0px auto;
+              transform-origin: center bottom;
+              background-size: 100% 100%;
+              width: 10vh;
+              height: 3vh;
+  
+              -webkit-transition: all 0.3s ease-out;
+              -moz-transition: all 0.3s ease-out;
+              -o-transition: all 0.3s ease-out;
+              -ms-transition: all 0.3s ease-out;
+              transition: all 0.3s ease-out;
+              z-index: 9999;
+              background-color: black;
+          }
+      </style>
+      </div>
+      <section id="ab" class="about-section">
+        <div class="container">
+          <div class="collagewraper">
+            <h1 class="section-title"
+            style="color: #fff; animation: glowing 0.2s infinite alternate">Registe-se e receba 100 moedas grátis!</h1>
+            <div class="about-title-wraper">
+              <img class="abimg" src="./src/images/12.png" alt="img" />
+            </div>
+            <div class="container">
+              <ul class="hero-list">
+                <li class="hero-item">
+                  <h2>Jogo grátis ilimitado</h2>
+                  <p>Experimente inúmeras rodadas e jogos sem qualquer custo.</p>
+                </li>
+                <li class="hero-item">
+                  <h2>Experiência social interactiva</h2>
+                  <p>
+                    Desafia os teus amigos, vence desafios e ascende ao
+                    o topo como o maior apostador.
+                  </p>
+                </li>
+                <li class="hero-item">
+                  <h2>Seleção diversificada de jogos</h2>
+                  <p>
+                    Descubra uma vasta gama de jogos, desde os clássicos mais adorados
+                    aos mais recentes lançamentos, para uma diversão sem fim.
+                  </p>
+                </li>
+                <li class="hero-item">
+                  <h2>Bónus Diário</h2>
+                  <p>
+                    Comece cada dia com recompensas emocionantes e reforços para manter
+                    a excitação viva.
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="about__wraper">
+              <h2
+                class="section-title"
+                style="color: #fff; animation: glowing 1.5s infinite alternate"
+              >
+                Explore o reino dos jogos sociais
+              </h2>
+              <div id="tab1" class="tab" style="display: block">
+                <p class="about-section__text">
+                  Os jogos sociais revolucionaram o nosso estilo de jogo ao fundir a
+                  a emoção dos jogos tradicionais com a interatividade das
+                  plataformas sociais. Estes jogos são criados exclusivamente para
+                  diversão, proporcionando a emoção das experiências clássicas de casino
+                  sem qualquer risco financeiro envolvido. Apelam a um público alargado
+                  público, permitindo aos jogadores desfrutar de rolos giratórios e
+                  jogar jogos de cartas num ambiente seguro. O que distingue estes
+                  jogos não é apenas a jogabilidade cativante, mas também as
+                  comunidades vibrantes que surgem à sua volta, onde os jogadores
+                  onde os jogadores trocam dicas, celebram vitórias e participam numa
+                  competição amigável, enriquecendo as suas experiências para além da jogabilidade.
+                </p>
+                <p class="about-section__text">
+                  O fascínio dos jogos de casino sociais gratuitos reside na sua
+                  acessibilidade e natureza inclusiva. Estes jogos introduzem a
+                  introduzem a emoção dos jogos de casino para aqueles que preferem
+                  preferem evitar o jogo com dinheiro real, proporcionando toda a diversão sem
+                  sem os riscos financeiros. Estas plataformas apresentam normalmente
+                  gráficos impressionantes e caraterísticas interactivas, tornando a
+                  interactivas, tornando a jogabilidade envolvente e agradável. Para muitos, elas oferecem a
+                  perfeita de jogo casual e interação social,
+                  criando um ambiente descontraído e convidativo. À medida que as plataformas digitais
+                  plataformas digitais continuam a evoluir, os jogos de casino sociais gratuitos
+                  estão a ganhar popularidade, estabelecendo-se como uma componente chave
+                  da comunidade de jogos online e do panorama dos media sociais.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <div class="container" id="games">
+          <h3
+            class="gallery-title"
+            style="color: #fff; animation: glowing 1.5s infinite alternate"
+          >
+          Descubra os nossos jogos de casino social gratuitos
+          </h3>
+          <p
+            class="gallery-text"
+            style="color: #fff; animation: glowing 1.5s infinite alternate"
+          >
+            Nota: Os jogos disponíveis neste sítio têm um carácter meramente
+            fins de entretenimento e não envolvem apostas com dinheiro real ou a
+            oportunidade de ganhar prémios físicos. A participação é completamente
+            gratuita e destina-se a adultos. Todas as conquistas e itens dos
+            jogos são virtuais e não têm qualquer valor no mundo real. Desfrute dos nossos jogos como um
+            passatempo agradável, sabendo que não foram concebidos para
+            para apostas com dinheiro real ou ganhos financeiros.
+          </p>
+
+          <ul class="gallery-list">
+            <li class="gallery-list__item">
+              <img
+                class="gallery-list__item__img"
+                src="./src/images/3.png"
+                alt="Embrace the Flames"
+              />
+              <h3
+                style="color: #fff; animation: glowing 1.5s infinite alternate"
+              >
+              Slot Machine - Os Frutos
+              </h3>
+              <p
+                style="color: #fff; animation: glowing 1.5s infinite alternate"
+              >
+              </p>
+              <div style="font-size: 24px" class="hero-btns logout" 
+                ><a href="./game/index.html" style="text-decoration: none; color: #fff;">Jogar</a></div
+              >
+              <div style="font-size: 24px" class="hero-btns login" 
+                ><a href="./game/index.html" style="text-decoration: none; color: #fff;">Jogar (-10 moedas)</a></div
+              >
+              <!-- <div onclick="show()" data-game-id="https://asccw.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=kingdombelow&lang=en_GB&practice=1&channel=desktop&demo=2" style="font-size: 24px" class="hero-btns more login" 
+                >Jogar (-10 moedas)</div
+              >
+              <div onclick="show()" data-game-id="https://asccw.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=kingdombelow&lang=en_GB&practice=1&channel=desktop&demo=2" style="font-size: 24px" class="hero-btns more logout" 
+                >Jogar</div
+              > -->
+              <!-- <div style="font-size: 24px" class="hero-btns logout"
+                ><a href="./signup.html" style="text-decoration: none;">Inscrever-se para jogar</a></div
+              > -->
+            </li>
+            <!-- <li class="gallery-list__item">
+              <img
+                class="gallery-list__item__img"
+                src="./src/images/2.png"
+                alt="Rediscover Your Destiny"
+              />
+              <h3
+                style="color: #fff; animation: glowing 1.5s infinite alternate"
+              >
+              REDESCOBRE O TEU DESTINO
+              </h3>
+              <p
+                style="color: #fff; animation: glowing 1.5s infinite alternate"
+              >
+              Desvenda mistérios antigos e encontra a tua verdadeira vocação nesta
+              jornada imersiva de destino e sorte.
+              </p>
+              <div style="font-size: 24px" class="hero-btns logout" 
+                ><a href="./game/index.html" style="text-decoration: none; color: #fff;">Jogar</a></div
+              >
+              <div style="font-size: 24px" class="hero-btns login" 
+                ><a href="./game/index.html" style="text-decoration: none; color: #fff;">Jogar (-10 moedas)</a></div
+              >
+              <div onclick="show()" data-game-id="https://asccw.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=ladyoffortunerm&lang=en_GB&practice=1&channel=desktop&demo=2" style="font-size: 24px" class="hero-btns more login" 
+                >Jogar (-10 moedas)</div
+              >
+              <div onclick="show()" data-game-id="https://asccw.playngonetwork.com/casino/ContainerLauncher?pid=2&gid=ladyoffortunerm&lang=en_GB&practice=1&channel=desktop&demo=2" style="font-size: 24px" class="hero-btns more logout" 
+                >Jogar</div
+              >
+              <div style="font-size: 24px" class="hero-btns logout" 
+                ><a href="./signup.html" style="text-decoration: none;">Inscrever-se para jogar</a></div
+              >
+            </li> -->
+          </ul>
+        </div>
+      </section>
+      <section class="section-revsbg">
+        <div class="container">
+          <div class="reviews-header">
+            <h2 class="reviews-title">O que dizem os nossos jogadores</h2>
+            <p class="reviews-subtitle">
+              Descubra o que os nossos jogadores pensam sobre as suas experiências no nosso
+              casino online. As suas opiniões são importantes para nós!
+            </p>
+          </div>
+          <div class="carousel">
+            <div class="carousel-track carousel-track-top">
+              <div class="carousel-item">
+                <img width="50px" src="./src/images/revsicon.png" alt="User Photo" />
+                <p>Lucas de Vries<br /><span>@LucasGameNL</span></p>
+                <p>
+                  Gosto sempre de jogar aqui! Os jogos gratuitos
+                  proporcionam horas de entretenimento sem riscos.
+                </p>
+              </div>
+              <div class="carousel-item">
+                <img width="50px" src="./src/images/revsicon.png"  alt="User Photo" />
+                <p>Sophie van Dam<br /><span>@SophieCasFan</span></p>
+                <p>
+                  Este casino social oferece uma excelente forma de relaxar
+                  depois de um longo dia, altamente recomendado!
+                </p>
+              </div>
+              <div class="carousel-item">
+                <img width="50px" src="./src/images/revsicon.png"  alt="User Photo" />
+                <p>Tom Jansen<br /><span>@TomPlay22</span></p>
+                <p>
+                  Grandes jogos e uma comunidade amigável, estou
+                  totalmente viciado no aspeto social aqui!
+                </p>
+              </div>
+              <!-- Duplicating for seamless scrolling -->
+              <div class="carousel-item">
+                <img width="50px" src="./src/images/revsicon.png" alt="User Photo" />
+                <p>Lucas de Vries<br /><span>@LucasGameNL</span></p>
+                <p>
+                  Gosto sempre de jogar aqui! Os jogos gratuitos
+                  proporcionam horas de entretenimento sem riscos.
+                </p>
+              </div>
+              <div class="carousel-item">
+                <img width="50px" src="./src/images/revsicon.png"  alt="User Photo" />
+                <p>Sophie van Dam<br /><span>@SophieCasFan</span></p>
+                <p>
+                  Este casino social oferece uma excelente forma de relaxar
+                  depois de um longo dia, altamente recomendado!
+                </p>
+              </div>
+              <div class="carousel-item">
+                <img width="50px" src="./src/images/revsicon.png"  alt="User Photo" />
+                <p>Tom Jansen<br /><span>@TomPlay22</span></p>
+                <p>
+                  Grandes jogos e uma comunidade amigável, estou
+                  totalmente viciado no aspeto social aqui!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="footer">
+      <section id="disclaimer-section">
+        <div class="container">
+          <h2
+            class="disclaimer-title"
+            style="color: #fff; animation: glowing 1.5s infinite alternate"
+          >
+          Declaração de exoneração de responsabilidade
+          </h2>
+          <p style="font-size: 24px; color: #fff" class="disclaimer-text">
+            Os jogos sociais oferecem uma mistura divertida de jogos tradicionais
+            jogos tradicionais de casino com os elementos interactivos das redes sociais.
+            Estes jogos têm um objetivo puramente lúdico e não envolvem
+            e não envolvem apostas financeiras reais. Embora reproduzam a emoção dos
+            de rolos giratórios ou jogos de cartas, são estritamente para diversão e concebidos
+            para os jogadores que preferem evitar os riscos associados ao jogo com dinheiro real
+            jogos de azar com dinheiro real. Estas plataformas promovem um ambiente seguro e inclusivo para
+            os utilizadores se envolvam com uma jogabilidade cativante e comunidades animadas.
+            Os jogadores podem partilhar dicas, celebrar vitórias e desfrutar de uma
+            competição amigável sem quaisquer implicações financeiras.
+          </p>
+        </div>
+      </section>
+    <div class="frame-wraper">
+        <div class="modal">
+          <div class="modal-header">
+            <div class="game-nameg"></div>
+            <button class="gallery-close">
+              <img
+                width="30px"
+                height="30px"
+                src="./src/images/close.svg"
+                alt=""
+              />
+            </button>
+          </div>
+    
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+      <div class="container container-footer">
+        <ul class="footer__list">
+          <li class="footer__list__item">
+            <a class="footer__list__item__link" href="./terms.html"
+              >Termos e condições
+            </a>
+          </li>
+          <li class="footer__list__item">
+            <a class="footer__list__item__link" href="./privacy.html"
+              >Política de privacidade
+            </a>
+          </li>
+        </ul>
+        <div class="container custom-class-y49gdg">
+          <ul class="bottom-list custom-class-ehr9v">
+            <!-- <li class="custom-class-szuix"><a href="https://www.gambleaware.org/"><img width="50px" src="./src/images/f1.png" alt="gambling"></a></li> -->
+            <li class="custom-class-3ig80v"><a href="https://www.safergamblingstandard.org.uk/"><img width="50px" src="./src/images/f2.png" alt="gambling"></a></li>
+            <li class="custom-class-naehg8"><img width="50px" src="./src/images/f3.png" alt="only 18+"></li>
+          </ul>
+        </div>
+        <style>
+          .custom-class-ehr9v {
+            font-family: "Nanum Myeongjo", serif;
+            font-optical-sizing: auto;
+            line-height: 1.5;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+            padding: 0;
+            text-align: left;
+            list-style: none;
+          }
+        </style>
+        <div style="color: #fff">© 2024 MIRIDIANIUM LIMITED | All rights reserved. Website developed and owned by MIRIDIANIUM LIMITED</div>
+      </div>
+    </footer>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Остановка и запуск анимации при наведении с помощью JavaScript
+        const trackTop = document.querySelector(".carousel-track-top");
+        const trackBottom = document.querySelector(".carousel-track-bottom");
+    
+        if (trackTop) {
+          trackTop.addEventListener("mouseenter", () => {
+            trackTop.style.animationPlayState = "paused";
+          });
+          trackTop.addEventListener("mouseleave", () => {
+            trackTop.style.animationPlayState = "running";
+          });
+        }
+    
+        if (trackBottom) {
+          trackBottom.addEventListener("mouseenter", () => {
+            trackBottom.style.animationPlayState = "paused";
+          });
+          trackBottom.addEventListener("mouseleave", () => {
+            trackBottom.style.animationPlayState = "running";
+          });
+        }
+    
+        // Логика формы
+        let orderForm = document.getElementById("contactForm");
+        let emailInput = document.getElementById("email");
+    
+        let savedEmail = getCookie("email");
+    
+        if (savedEmail !== "") {
+          emailInput.value = savedEmail;
+        }
+    
+        if (orderForm) {
+          orderForm.addEventListener("submit", function (event) {
+            document.cookie =
+              "email=" +
+              encodeURIComponent(emailInput.value) +
+              "; expires=Thu, 18 Dec 2024 12:00:00 UTC; path=/";
+          });
+        }
+      });
+    
+      function getCookie(name) {
+        let nameEQ = name + "=";
+        let cookies = document.cookie.split(";");
+        for (let i = 0; i < cookies.length; i++) {
+          let cookie = cookies[i];
+          while (cookie.charAt(0) === " ") {
+            cookie = cookie.substring(1);
+          }
+          if (cookie.indexOf(nameEQ) === 0) {
+            return decodeURIComponent(
+              cookie.substring(nameEQ.length, cookie.length)
+            );
+          }
+        }
+        return "";
+      }
+    </script>
+    <script src="./src/authv2.js"></script>
+    <script src="./src/indexv2.js"></script>
+  </body>
+</html>

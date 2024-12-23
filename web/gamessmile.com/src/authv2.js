@@ -65,7 +65,7 @@ async function registration(){
         const res = await req.json();
         localStorage.setItem('token', res.accessToken);
         isAuth = true;
-        window.location.href="/";
+        window.location.href="/main.html";
     }catch(e){
         alert("Authentication error");
         console.error(e);
