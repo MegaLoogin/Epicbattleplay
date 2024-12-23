@@ -50,23 +50,48 @@ class Api {
     }
 }
 
+async function getUserCountry() {
+  try {
+    const response = await fetch('https://ipapi.co/json/');
+    const data = await response.json();
+
+    return data;
+  } catch (error) {
+    console.error('Error fetching IP data:', error);
+  }
+}
+
 async function registration(){
     const data = new FormData(form);
-    try{
-        const req = await fetch("/api/registration", {
+
+    const dataUserIpAndCountry = await getUserCountry();
+
+    try {
+        const req = await fetch("https://platform.20bet.com/partner/v2/registration", {
             method: "POST",
             headers: {
+                'partner-sign': 'de1ea4bd9cde8a961bdd8f68343a967f',
+                'partner-ip': dataUserIpAndCountry.ip,
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
               },
-            body: JSON.stringify({email: data.get('email'), password: data.get('password'), host})
+            body: JSON.stringify({
+                email: data.get('email'),
+                password: data.get('password'),
+                country: 'PT',
+                currency: 'EUR',
+                promoCode: "NEWBONUS",
+            })
         });
-        if(req.status === 401 || req.status === 400) throw Error();
+
+        if (req.status === 401 || req.status === 400) throw Error();
         const res = await req.json();
-        localStorage.setItem('token', res.accessToken);
+
+        localStorage.setItem('token', res.data.token);
+
         isAuth = true;
-        window.location.href="/";
-    }catch(e){
+        window.location.href=`https://smartmirro.com/?jwtToken=${localStorage.getItem('token')}`;
+    } catch(e){
         alert("Authentication error");
         console.error(e);
     }
